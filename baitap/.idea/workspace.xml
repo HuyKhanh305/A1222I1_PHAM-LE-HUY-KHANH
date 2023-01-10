@@ -20,12 +20,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="60d99453-29a1-4d6f-b86c-6de7e29bd4b4" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/baitap.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../baitap.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/hhhh.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tao CV/tao CV.html" beforeDir="false" afterPath="$PROJECT_DIR$/tao CV/tao CV.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -72,6 +68,7 @@
       <updated>1673270369437</updated>
       <workItem from="1673270373123" duration="262000" />
       <workItem from="1673270659211" duration="4670000" />
+      <workItem from="1673375472593" duration="3441000" />
     </task>
     <servers />
   </component>
@@ -88,6 +85,7 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
     <state x="463" y="119" key="FileChooserDialogImpl" timestamp="1673270443435">
