@@ -20,14 +20,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="60d99453-29a1-4d6f-b86c-6de7e29bd4b4" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/BAIHOC5 HTML FORM AND TABLE/taoformdongianp1.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BAIHOC5 HTML FORM AND TABLE/taoformdongianp2.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BAIHOC2 FLOWCHART/FLOWCHART-baitap1.drawio.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/BAIHOC2 FLOWCHART/FLOWCHART-baitap2.drawio.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/BAIHOC2 FLOWCHART/FLOWCHART-baitap3.drawio.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/BAIHOC2 FLOWCHART/FLOWCHART-baitap4.drawio.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/BAIHOC2 FLOWCHART/FLOWCHART-baitap5.drawio.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/BAIHOC3 HTML/tao CV/tao CV.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/BAIHOC3 HTML/taodanhsach/taodanhsach.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BAIHOC5 HTML FORM AND TABLE/taobangnangcaop1.html" beforeDir="false" afterPath="$PROJECT_DIR$/BAIHOC5 HTML FORM AND TABLE/taobangnangcaop1.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -45,12 +41,15 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="ProjectId" id="2K5hUqIjFiMqcpLuoRrlYtrNPkc" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
@@ -75,7 +74,9 @@
       <workItem from="1673270373123" duration="262000" />
       <workItem from="1673270659211" duration="4670000" />
       <workItem from="1673375472593" duration="3441000" />
-      <workItem from="1673440519473" duration="13694000" />
+      <workItem from="1673440519473" duration="19243000" />
+      <workItem from="1673540739887" duration="868000" />
+      <workItem from="1673541672961" duration="13311000" />
     </task>
     <servers />
   </component>
@@ -94,10 +95,17 @@
     </option>
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+  </component>
   <component name="WindowStateProjectService">
     <state x="463" y="119" key="FileChooserDialogImpl" timestamp="1673270443435">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="463" y="119" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1673270443435" />
+    <state x="339" y="164" key="run.anything.popup" timestamp="1673473495489">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="339" y="164" key="run.anything.popup/0.0.1366.728@0.0.1366.728" timestamp="1673473495489" />
   </component>
 </project>
