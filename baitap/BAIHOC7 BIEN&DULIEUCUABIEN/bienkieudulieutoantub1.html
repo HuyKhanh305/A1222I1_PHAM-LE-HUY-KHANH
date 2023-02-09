@@ -5,22 +5,61 @@
     <title>Title</title>
 </head>
 <body>
-<h1> TÍNH ĐIỂM TRUNG BÌNH </h1>
-<p> Nhập điểm môn Toán: </p>
-<input type="number" id="math">
-<p> Nhập điểm môn Lý: </p>
-<input type="number" id="science">
-<p> Nhập điểm môn Hóa </p>
-<input type="number" id="chemistry">
-<button type="button" onclick="tinhdiem()"> Calculate </button>
-<p id="ketqua" style="color: red"> </p>
-<script>
-function tinhdiem() {
-    let m = +document.getElementById('math').value;
-    let s = +document.getElementById('science').value;
-    let c = +document.getElementById('chemistry').value;
-    document.getElementById('ketqua').innerText= "ĐIỂM TRUNG BÌNH LÀ: " + (m + s + c);
-}
-</script>
+<!--// BÀI 1: TÍNH ĐIỂM TRUNG BÌNH 3 MÔN TOÁN, LÝ, HÓA-->
+<!--<h1> TÍNH ĐIỂM TRUNG BÌNH </h1>-->
+<!--<p> Nhập điểm môn Toán: </p>-->
+<!--<input type="number" id="math">-->
+<!--<p> Nhập điểm môn Lý: </p>-->
+<!--<input type="number" id="science">-->
+<!--<p> Nhập điểm môn Hóa </p>-->
+<!--<input type="number" id="chemistry">-->
+<!--<button type="button" onclick="tinhdiem()"> Calculate </button>-->
+<!--<p id="ketqua" style="color: red"> </p>-->
+<!--<script>-->
+<!--function tinhdiem() {-->
+<!--    let m = +document.getElementById('math').value;-->
+<!--    let s = +document.getElementById('science').value;-->
+<!--    let c = +document.getElementById('chemistry').value;-->
+<!--    document.getElementById('ketqua').innerText= "ĐIỂM TRUNG BÌNH LÀ: " + (m + s + c);-->
+<!--}-->
+<!--</script>-->
+
+<!--// BÀI 2: CHƯƠNG TRÌNH CHUYỂN ĐỘ C SANG ĐỘ F-->
+<!--<h1> CHƯƠNG TRÌNH CHUYỂN ĐỔI ĐỘ C SANG ĐỘ F </h1>-->
+<!--<p> NHẬP VÀO ĐỘ C </p>-->
+<!--<input type="number" id="num">-->
+<!--<p> <button type="button" onclick="chuyendoi()"> CHUYỂN ĐỔI </button> </p>-->
+<!--<p id="result"> </p>-->
+<!--<script>-->
+<!--    function chuyendoi() {-->
+<!--        let C = +document.getElementById('num').value;-->
+<!--        F = C*9/5 + 32;-->
+<!--        document.getElementById('result').innerText= "ĐỘ F LÀ: " + F;-->
+<!--    }-->
+<!--</script>-->
+
+<!--// BÀI 3 & BÀI 4 : TÍNH CHU VI VÀ DIỆN TÍCH HÌNH TRÒN-->
+<!--<h1> CHU VI & DIEN TICH HINH TRON </h1>-->
+<!--<p> Nhập bán kính (cm) </p>-->
+<!--<label> <input type="number" id="radius"> </label>-->
+<!--<button type="button" id="diam" onclick="tinhchuvi()"> CALCULATE DIAMETER </button>-->
+<!--<button type="button" id="dientich" onclick="tinhdientich()"> CALCULATE AREA </button>-->
+<!--<p id="diameter"> </p>-->
+<!--<p id="area"> </p>-->
+<!--<script>-->
+<!--    const Pi = 3.14;-->
+<!--    function tinhchuvi() {-->
+<!--        let radius = +document.getElementById('radius').value;-->
+<!--        let chuvi = radius * 2 * Pi;-->
+<!--        document.getElementById('diameter').innerText= "Chu vi hình tròn là " + parseInt(chuvi) +"cm";-->
+<!--    }-->
+
+<!--    function tinhdientich() {-->
+<!--        let radius = +document.getElementById('radius').value;-->
+<!--        let area = radius * radius * Pi;-->
+<!--        document.getElementById('area').innerText= "Diện tích hình tròn là " + parseInt(area) +"cm2";-->
+<!--    }-->
+<!--</script>-->
+
 </body>
 </html>
