@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1> CHƯƠNG TRÌNH CHUYỂN ĐỔI ĐỘ C SANG ĐỘ F </h1>
+<p> NHẬP VÀO ĐỘ C </p>
+<input type="number" id="num">
+<p> <button type="button" onclick="chuyendoi()"> CHUYỂN ĐỔI </button> </p>
+<p id="result"> </p>
+<script>
+    function chuyendoi() {
+    let C = +document.getElementById('num').value;
+    F = C*9/5 + 32;
+    document.getElementById('result').innerText= "ĐỘ F LÀ: " + F;
+    }
+</script>
+</body>
+</html>

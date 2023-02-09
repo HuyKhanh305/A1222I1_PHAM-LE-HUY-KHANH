@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<table>
+    <tr>
+        <td colspan="2"><input type="number" id="so1"></td>
+        <td colspan="2"><input type="number" id="so2"</td>
+    </tr>
+    <tr>
+        <td>
+            <button type="button" onclick="phepcong()"> Additon(+)</button>
+        </td>
+        <td>
+            <button type="button" onclick="pheptru()"> Subtraction(-)</button>
+        </td>
+        <td>
+            <button type="button" onclick="phepnhan()"> Multiplication(x)</button>
+        </td>
+        <td>
+            <button type="button" onclick="phepchia()"> Division(/)</button>
+        </td>
+    </tr>
+    <tr>
+        <td id="ketqua" colspan="2"></td>
+    </tr>
+</table>
+<script>
+    function phepcong() {
+        let num1 = +document.getElementById('so1').value;
+        let num2 = +document.getElementById('so2').value;
+        document.getElementById('ketqua').innerText = "Result Addition is: " + (num1 + num2);
+    }
+
+    function pheptru() {
+        let num1 = +document.getElementById('so1').value;
+        let num2 = +document.getElementById('so2').value;
+        document.getElementById('ketqua').innerText = "Result Subtraction is: " + (num1 - num2);
+    }
+
+    function phepnhan() {
+        let num1 = +document.getElementById('so1').value;
+        let num2 = +document.getElementById('so2').value;
+        document.getElementById('ketqua').innerText = "Result Multiplication is: " + (num1 * num2);
+    }
+
+    function phepchia() {
+        let num1 = +document.getElementById('so1').value;
+        let num2 = +document.getElementById('so2').value;
+        document.getElementById('ketqua').innerText = "Result Division is: " + (num1 / num2);
+    }
+</script>
+</body>
+</html>
