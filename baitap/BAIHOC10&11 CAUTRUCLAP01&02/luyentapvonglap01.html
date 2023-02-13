@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title> Luyện tập vòng lặp FOR, WHILE</title>
+</head>
+<body>
+<!--/*Bài 1: Sử dụng vòng lặp để đếm từ 1 đến 100. Khi số là 99, hiển thị hộp thoại thông báo là đã hoàn thành.-->
+<!--<script>-->
+<!--    for (let i = 0; i < 100; i++) {-->
+<!--        document.write(i + " ");-->
+<!--        if (i === 99) {-->
+<!--            alert("Đã hoàn thành");-->
+<!--        }-->
+<!--    }-->
+<!--</script>-->
+
+<!--Bài 2: Sử dụng hàm prompt() để lấy thông tin nhiệt độ hiện tại được nhập bởi người truy cập. Nếu nhiệt độ nhập vào trên 100, yêu cầu người dùng giảm nhiệt độ. Nếu nhiệt độ dưới 20, yêu cầu người dùng tăng nhiệt độ.-->
+<!--<script>-->
+<!--    let num;-->
+<!--    do {-->
+<!--        num = +prompt("Nhập vào nhiệt độ");-->
+<!--        if (num > 100) {-->
+<!--            alert("Vui lòng giảm nhiệt độ");-->
+<!--        } else {-->
+<!--            alert("Vui lòng tăng nhiệt độ");-->
+<!--        }-->
+<!--    } while (num > 100 || num <20);-->
+<!--</script>-->
+
+<!--Bài 3: Hiển thị ra 20 số trong dãy fibonacci đầu tiên.-->
+<!--<script>-->
+<!--    let sotruoc = 0;-->
+<!--    let sosau = 1;-->
+<!--    for (let i = 0; i <=20 ; i++) {-->
+<!--        document.write(sotruoc + " ");-->
+<!--        let sum = sotruoc + sosau;-->
+<!--        sotruoc = sosau;-->
+<!--        sosau = sum;-->
+<!--    }-->
+<!--</script>-->
+
+<!--/*Bài 4: Tìm số đầu tiên trong dãy fibonacci chia hết cho 5.-->
+<!--<script>-->
+<!--    let sotruoc;-->
+<!--    let sosau;-->
+<!--    let sum = sotruoc + sosau;-->
+<!--    for (let i = 0; i <= 10; i++) {-->
+<!--        if (sum %5===0) {-->
+<!--            document.write(sum + " ");-->
+<!--            break;-->
+<!--        }-->
+<!--    }-->
+<!--</script>-->
+
+<!--/*Bài 5: Tính tổng của 20 số đầu tiên trong dãy fibonacci.-->
+<!--<script>-->
+<!--    let a = 1;-->
+<!--    let b = 1;-->
+<!--    let c;-->
+<!--    let sum;-->
+<!--    for (let i = 1; i <= 20; i++) {-->
+<!--        b = c;-->
+<!--        c = a + b;-->
+<!--        sum = a + b + c;-->
+<!--    }-->
+<!--    document.write("tong bang " + sum);-->
+<!--</script>-->
+
+<!--/*Bài 6: Tính tổng của 30 số chia hết cho 7 đầu tiên trong các số tự nhiên.-->
+<!--<script>-->
+<!--    let tong=0;-->
+<!--    let sum =0;-->
+<!--    for (let i= 0; i < 30; i++ ){-->
+<!--         tong = tong + 7;-->
+<!--         sum += tong;-->
+<!--        document.write(tong + " ");-->
+<!--        }-->
+<!--    document.write("<br>" + "Tong bang: " + sum);-->
+<!--</script>-->
+
+<!--/*Bài 7: Hãy viết một chương trình in ra các số từ 1 đến 100. -->
+<!--Nhưng nếu số chia hết cho 3 thì in ra "Fizz", 5 thì in ra "Buzz" thay vì in ra số đó. -->
+<!--Và nếu số đó chia hết cho cả 3 và 5 thì in ra chữ "FizzBuzz".*/-->
+<!--<script>-->
+<!--    for (let i = 1; i < 100 ; i++) {-->
+<!--        if (i % 3===0 && i % 5===0) {-->
+<!--            document.write("FizzBuzz");-->
+<!--        } else if (i % 5 ===0) {-->
+<!--            document.write("Buzz");-->
+<!--        } else if (i % 3===0) {-->
+<!--            document.write("Fizz");-->
+<!--        } else {-->
+<!--            document.write(i);-->
+<!--        }-->
+<!--    }-->
+<!--</script>-->
+
+<!--/*Bài 8: Game đoán số.-->
+<!--</script>-->
+<!--<script>-->
+<!--let phamvi = +prompt("Trò chơi đoán số từ 0 - ");-->
+<!--let nhapso = +prompt("Nhập vào số muốn đoán");-->
+<!--let soRamdom;-->
+<!--if(phamvi){-->
+<!--soRamdom = Math.floor(Math.random()*phamvi)-->
+<!--if(soRamdom === nhapso){-->
+<!--alert("Bạn đã đoán đung")-->
+<!--}else{-->
+<!--while (soRamdom !== nhapso){-->
+<!--alert("Bạn đoán sai số đúng là "+soRamdom)-->
+<!--nhapso = Number(prompt("Nhập vào số muốn đoán"))-->
+<!--}-->
+<!--alert("Bạn đoán đúng")-->
+<!--}-->
+<!--}-->
+<!--</script>-->
+
+</body>
+</html>
