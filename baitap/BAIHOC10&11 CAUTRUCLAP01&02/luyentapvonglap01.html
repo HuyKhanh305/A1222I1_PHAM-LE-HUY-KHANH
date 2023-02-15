@@ -42,10 +42,12 @@
 
 <!--/*Bài 4: Tìm số đầu tiên trong dãy fibonacci chia hết cho 5.-->
 <!--<script>-->
-<!--    let sotruoc;-->
-<!--    let sosau;-->
-<!--    let sum = sotruoc + sosau;-->
+<!--    let sotruoc=0;-->
+<!--    let sosau=1;-->
 <!--    for (let i = 0; i <= 10; i++) {-->
+<!--        let sum = sotruoc + sosau;-->
+<!--        sotruoc = sosau;-->
+<!--        sosau = sum;-->
 <!--        if (sum %5===0) {-->
 <!--            document.write(sum + " ");-->
 <!--            break;-->
@@ -55,16 +57,17 @@
 
 <!--/*Bài 5: Tính tổng của 20 số đầu tiên trong dãy fibonacci.-->
 <!--<script>-->
-<!--    let a = 1;-->
+<!--    let a = 0;-->
 <!--    let b = 1;-->
 <!--    let c;-->
-<!--    let sum;-->
-<!--    for (let i = 1; i <= 20; i++) {-->
-<!--        b = c;-->
-<!--        c = a + b;-->
-<!--        sum = a + b + c;-->
+<!--    let sumfibo=0;-->
+<!--    for (let i = 0; i < 20; i++) {-->
+<!--        c = b;-->
+<!--        b = b + a;-->
+<!--        a = c;-->
+<!--        sumfibo += c;-->
 <!--    }-->
-<!--    document.write("tong bang " + sum);-->
+<!--    document.write("tong bang " + sumfibo);-->
 <!--</script>-->
 
 <!--/*Bài 6: Tính tổng của 30 số chia hết cho 7 đầu tiên trong các số tự nhiên.-->
@@ -97,7 +100,6 @@
 <!--</script>-->
 
 <!--/*Bài 8: Game đoán số.-->
-<!--</script>-->
 <!--<script>-->
 <!--let phamvi = +prompt("Trò chơi đoán số từ 0 - ");-->
 <!--let nhapso = +prompt("Nhập vào số muốn đoán");-->
