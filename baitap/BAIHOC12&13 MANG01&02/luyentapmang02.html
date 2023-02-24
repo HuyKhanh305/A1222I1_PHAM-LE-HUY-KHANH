@@ -55,21 +55,35 @@
 <!--</script>-->
 
 <!--Bài 5: Viết một chương trình nhập vào 2 chuỗi, sau đó kiểm tra xem hai chuỗi có giống nhau hay không.-->
+<!--<script>-->
+<!--    let str1 = prompt("Nhap vao chuoi dau tien");-->
+<!--    let str2 = prompt("Nhap vao chuoi thu hai");-->
+<!--    let res1 = str1.split(" ");-->
+<!--    let res2 = str2.split(" ");-->
+<!--    let flag = true;-->
+<!--    for (let i = 0; i < res1.length; i++) {-->
+<!--        if (res1[i] !== res2[i]) {-->
+<!--            flag = false;-->
+<!--            document.write("2 chuoi khac nhau");-->
+<!--        }-->
+<!--    }-->
+<!--    if (flag === true) {-->
+<!--        document.write("2 chuoi giong nhau");-->
+<!--    }-->
+<!--</script>-->
+
+<!--Bài 6: Viết chương trình nhập vào một mảng ký tự, -->
+<!--tìm tất cả các ký tự trong mảng là (-) và thay thế các ký tự này bởi ký tự ( _ )-->
 <script>
-    let str1 = prompt("Nhap vao chuoi dau tien");
-    let str2 = prompt("Nhap vao chuoi thu hai");
-    let res1 = str1.split("");
-    let res2 = str2.split("");
-    for (let i = 0; i < res1.length ; i++) {
-        for (let j = 0; j < res2.length ; j++) {
-            if (res1 === res2) {
-                document.write("2 chuoi giong nhau");
-            } else {
-                document.write("2 chuoi khac nhau");
-            }
+    let str = prompt("Nhập vào chuỗi bất kỳ");
+    let array =[];
+    for (let i=0; i < str.length;i++){
+        array[i]= str.slice(i,i+1);
+        if(array[i] ==='-'){
+            array.splice(i,1,'_');
         }
     }
+    document.write(array.join(""));
 </script>
-
 </body>
 </html>
