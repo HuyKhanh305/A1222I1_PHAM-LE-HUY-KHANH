@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+  let foot = +prompt("Nhap vap feet"));
+  let meter = +prompt("Nhap vao met"));
+  let result1 = footToMeter(foot);
+  let result2 = meterToFoot(meter);
+  document.write("Ket qua tu foot sang met la: "+ result1 + "feet" + "<br>");
+  document.write("Ket qua tư met sang foot la: "+ result2 + "m");
+  function footToMeter(foot) {
+      return 0.305 * foot ;
+  }
+  function meterToFoot(meter) {
+      return 3.279 * meter ;
+  }
+</script>
+</body>
+</html>
