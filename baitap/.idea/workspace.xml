@@ -20,13 +20,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="60d99453-29a1-4d6f-b86c-6de7e29bd4b4" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/BAIHOC14&amp;15 HAM01&amp;02/chuyendoigiuafeetvameter.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BAIHOC14&amp;15 HAM01&amp;02/hamkiemtrasonguyento.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BAIHOC14&amp;15 HAM01&amp;02/luyentaptaovasudungham01.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BAIHOC14&amp;15 HAM01&amp;02/luyentaptaovasudungham02.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BAIHOC16&amp;17 LAPTRINHHUONGDOITUONG01&amp;02/xaydunglopmotaTemparature.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BAIHOC16&amp;17 LAPTRINHHUONGDOITUONG01&amp;02/xaydunglopmotadienthoai.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BAIHOC16&amp;17 LAPTRINHHUONGDOITUONG01&amp;02/xaydunglopmotahinhchunhat.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CASE STUDY MODULE 1/yeucau3.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CASE STUDY MODULE 1/yeucau4.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BAIHOC10&amp;11 CAUTRUCLAP01&amp;02/hienthicacsonguyentodautien.html" beforeDir="false" afterPath="$PROJECT_DIR$/BAIHOC10&amp;11 CAUTRUCLAP01&amp;02/hienthicacsonguyentodautien.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BAIHOC12&amp;13 MANG01&amp;02/luyentapmang02.html" beforeDir="false" afterPath="$PROJECT_DIR$/BAIHOC12&amp;13 MANG01&amp;02/luyentapmang02.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BAIHOC14&amp;15 HAM01&amp;02/chuyendoigiuafeetvameter.html" beforeDir="false" afterPath="$PROJECT_DIR$/BAIHOC14&amp;15 HAM01&amp;02/chuyendoigiuafeetvameter.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BAIHOC14&amp;15 HAM01&amp;02/hamkiemtrasonguyento.html" beforeDir="false" afterPath="$PROJECT_DIR$/BAIHOC14&amp;15 HAM01&amp;02/hamkiemtrasonguyento.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -93,7 +94,10 @@
       <workItem from="1676560059637" duration="7611000" />
       <workItem from="1676638388383" duration="5807000" />
       <workItem from="1676892058169" duration="38104000" />
-      <workItem from="1677227497600" duration="40395000" />
+      <workItem from="1677227497600" duration="50738000" />
+      <workItem from="1677668515429" duration="9038000" />
+      <workItem from="1677847025154" duration="6769000" />
+      <workItem from="1678000290882" duration="5491000" />
     </task>
     <servers />
   </component>
@@ -124,9 +128,9 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="339" y="164" key="run.anything.popup/0.0.1366.728@0.0.1366.728" timestamp="1673473495489" />
-    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1676465395039">
+    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1678005272778">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1676465395039" />
+    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1678005272778" />
   </component>
 </project>

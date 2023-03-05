@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    class Mobile {
+        constructor(name, battery) {
+            this.name = name;
+            this.battery = battery;
+
+        }
+
+        checkOnOrOff() {
+            if (this.battery > 0) {
+                alert("Điện thoại " + this.name + " đang bật");
+            } else {
+                alert("Điện thoại " + this.name + " đang tắt");
+            }
+        }
+
+
+        tramThongTin(message) {
+            this.message = message;
+
+        }
+
+        getMessage() {
+            return this.message;
+        }
+
+        sendMessage(message, mobile) {
+            mobile.tramThongTin(message);
+        }
+    }
+
+    let iphone = new Mobile("Iphone", 90);
+    let nokia = new Mobile("Nokia", 80);
+    iphone.checkOnOrOff();
+    nokia.checkOnOrOff();
+    let content = prompt("Nhập nội dung tin nhắn: ");
+    nokia.sendMessage(content, iphone);
+    alert("Tin nhắn đã được gửi");
+    let message = iphone.getMessage();
+    document.write("Tin nhắn được gửi từ Nokia đến Iphone: " + message);
+
+</script>
+
+</body>
+</html>

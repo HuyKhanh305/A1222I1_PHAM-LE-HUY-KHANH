@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Mảng và Loop</title>
+</head>
+<body>
+<!--Bài 1: Cho mảng a chỉ chứa các số nguyên. Xây dựng mảng b là prefix sums của mảng a-->
+<!--Ví dụ: Cho a = [1, 2, 3], thì kết quả prefixSums(a) = [1, 3, 6].-->
+<!--Mảng b được tạo ra: [1, 1 + 2, 1 + 2 + 3] = [1, 3, 6]-->
+<!--<script>-->
+<!--    let n = +prompt("Nhap vao do dai mang");-->
+<!--    let a = [];-->
+<!--    let b = [];-->
+<!--    let sum = 0;-->
+<!--    for (let i = 0; i < n ; i++) {-->
+<!--        a[i] = +prompt("Nhap vao gia tri");-->
+<!--    }-->
+<!--    for (let i = 0; i < n; i++) {-->
+<!--        sum += a[i];-->
+<!--        b[i] = sum;-->
+<!--    }-->
+<!--    document.write('Mảng A là: ' + a + "<br>");-->
+<!--    document.write("Mảng prefix sum của A là: " +b);-->
+<!--</script>-->
+
+<!--Bài 2: Cho 2 mảng A và B chứa số nguyên. -->
+<!--Tìm ra một mảng đã được sắp xếp chứa các phần tử xuất hiện trong mảng B nhưng lại không xuất hiện A-->
+<!--<script>-->
+<!--    let arr1 = [5,8,2,3,9,5];-->
+<!--    let arr2 = [5,8,4,3,7,9,2];-->
+
+<!--    for (let i = 0; i < arr1.length ; i++) {-->
+<!--            if (arr1[i] === arr1[1]) {-->
+<!--                arr1.splice(i,i+1);-->
+<!--            }-->
+<!--        }-->
+
+<!--    for (let j = 0; j < arr2.length ; j++) {-->
+<!--        if (arr2[j] === arr2[j]) {-->
+<!--            arr2.splice(j,j+1);-->
+<!--        }-->
+<!--    }-->
+<!--</script>-->
+
+<!--Bài 4: Tạo menu gọi món. Hiện danh sách menu -> bấm chọn hiện đơn giá và nhập vào số lượng -> hiện số tiền-->
+<!--<h1> MENU </h1>-->
+<!--<table>-->
+<!--    <tr>-->
+<!--        <td>-->
+<!--            <button onclick="mon1()"> 1</button>-->
+<!--        </td>-->
+<!--        <td> CAFE</td>-->
+<!--    </tr>-->
+<!--    <tr>-->
+<!--        <td>-->
+<!--            <button onclick="mon2()"> 2</button>-->
+<!--        </td>-->
+<!--        <td> CAM VẮT</td>-->
+<!--    </tr>-->
+<!--    <tr>-->
+<!--        <td>-->
+<!--            <button onclick="mon3()"> 3</button>-->
+<!--        </td>-->
+<!--        <td> NƯỚC ÉP CÀ RỐT</td>-->
+<!--    </tr>-->
+<!--    <tr>-->
+<!--        <td>-->
+<!--            <button onclick="mon4()"> 4</button>-->
+<!--        </td>-->
+<!--        <td> NƯỚC ÉP CÀ CHUA</td>-->
+<!--    </tr>-->
+<!--    <tr>-->
+<!--        <td>-->
+<!--            <button onclick="mon5()"> 5</button>-->
+<!--        </td>-->
+<!--        <td> NƯỚC LỌC</td>-->
+<!--    </tr>-->
+<!--    <tr>-->
+<!--        <td>-->
+<!--            <button onclick="mon6()"> 6</button>-->
+<!--        </td>-->
+<!--        <td> NƯỚC DỪA</td>-->
+<!--    </tr>-->
+<!--    <tr>-->
+<!--        <td>-->
+<!--            <button onclick="mon7()"> 7</button>-->
+<!--        </td>-->
+<!--        <td> THOÁT GỌI MÓN</td>-->
+<!--    </tr>-->
+<!--</table>-->
+<!--<script>-->
+
+<!--    function mon1() {-->
+<!--        let a = prompt("Nhập vào số lượng");-->
+<!--        let price1 = 15000;-->
+<!--        alert("Đơn giá là: " + price1);-->
+<!--        document.write("Số tiền cần trả là: " + (a * price1));-->
+<!--    }-->
+
+<!--    function mon2() {-->
+<!--        let a = prompt("Nhập vào số lượng");-->
+<!--        let price2 = 30000;-->
+<!--        alert("Đơn giá là: " + price2);-->
+<!--        document.write("Số tiền cần trả là: " + (a * price2));-->
+<!--    }-->
+
+<!--    function mon3() {-->
+<!--        let a = prompt("Nhập vào số lượng");-->
+<!--        let price3 = 25000;-->
+<!--        alert("Đơn giá là: " + price3);-->
+<!--        document.write("Số tiền cần trả là: " + (a * price3));-->
+<!--    }-->
+
+<!--    function mon4() {-->
+<!--        let a = prompt("Nhập vào số lượng");-->
+<!--        let price4 = 25000;-->
+<!--        alert("Đơn giá là: " + price4);-->
+<!--        document.write("Số tiền cần trả là: " + (a * price4));-->
+<!--    }-->
+
+<!--    function mon5() {-->
+<!--        let a = prompt("Nhập vào số lượng");-->
+<!--        let price5 = 10000;-->
+<!--        alert("Đơn giá là: " + price5);-->
+<!--        document.write("Số tiền cần trả là: " + (a * price5));-->
+<!--    }-->
+
+<!--    function mon6() {-->
+<!--        let a = prompt("Nhập vào số lượng");-->
+<!--        let price6 = 50000;-->
+<!--        alert("Đơn giá là: " + price6);-->
+<!--        document.write("Số tiền cần trả là: " + (a * price6));-->
+<!--    }-->
+
+<!--    function mon7() {-->
+<!--        document.write("Cảm ơn quý khách đã gọi món");-->
+<!--    }-->
+<!--</script>-->
+
+</body>
+</html>

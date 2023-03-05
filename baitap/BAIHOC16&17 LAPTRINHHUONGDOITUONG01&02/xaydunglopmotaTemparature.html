@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    class Temperature {
+        constructor(nhietDo) {
+            this.nhietDo = nhietDo;
+        }
+
+        setnhietDo(newnhietDo) {
+            if (newnhietDo < -273) {
+                document.write("Nhap lai nhiet do")
+            } else {
+                this.nhietDo = newnhietDo;
+            }
+        }
+
+        doCtodoF(){
+            return this.nhietDo * 9 /5 + 32;
+        }
+        doCtodoKevin(){
+            return this.nhietDo + 273.15;
+        }
+    }
+
+    let temperature = new Temperature(25);
+    let doF = temperature.doCtodoF();
+    let doKevin = temperature.doCtodoKevin();
+    document.write("ĐỘ C SANG ĐỘ F: "+ doF + "F" +"<br>");
+    document.write("ĐỘ C SANG DỘ KEVIN: " + doKevin +"K");
+    // temperature.setnhietDo(-276);
+</script>
+</body>
+</html>
