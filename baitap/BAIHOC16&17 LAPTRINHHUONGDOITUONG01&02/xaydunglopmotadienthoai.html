@@ -13,31 +13,44 @@
 
         }
 
-        checkOnOrOff() {
-            if (this.battery > 0) {
-                alert("Điện thoại " + this.name + " đang bật");
-            } else {
-                alert("Điện thoại " + this.name + " đang tắt");
+        chargeBattery(){
+            if (this.battery <= 10){
+                alert("Hãy cắm sạc " + this.name);
+                this.battery++;
             }
         }
 
+        checkOnOrOff() {
+            if (this.battery > 0) {
+                alert("Điện thoại " + this.name + " đang bật" + "." +" Phần trăm Pin là "+ this.battery +"%");
+            } else {
+                alert("Điện thoại " + this.name + " không hoạt động được");
+            }
+        }
 
-        tramThongTin(message) {
+        layThongTin(message) {
             this.message = message;
 
         }
 
         getMessage() {
+            this.battery--;
+            alert("Pin "+ this.name +" còn lại " + this.battery);
             return this.message;
+
         }
 
         sendMessage(message, mobile) {
-            mobile.tramThongTin(message);
+            this.battery--;
+            alert("Pin "+ this.name +" còn lại " + this.battery);
+            mobile.layThongTin(message);
         }
     }
 
-    let iphone = new Mobile("Iphone", 90);
-    let nokia = new Mobile("Nokia", 80);
+    let iphone = new Mobile("Iphone", 40);
+    let nokia = new Mobile("Nokia", 10);
+    iphone.chargeBattery();
+    nokia.chargeBattery();
     iphone.checkOnOrOff();
     nokia.checkOnOrOff();
     let content = prompt("Nhập nội dung tin nhắn: ");

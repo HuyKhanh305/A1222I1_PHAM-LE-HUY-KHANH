@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<button type="button" onclick="on()">BAT DEN</button>
+<button type="button" onclick="off()">TAT DEN</button>
+<button type="button" onclick="connection()">CONNECTION</button>
+<script>
+    let SwitchButton = function () {
+        this.status = false;
+        this.lamp = null;
+        this.connectToLamp = function () {
+            if (this.status === true) {
+                alert("Connected!!!");
+            } else {
+                alert("Not Connected!!!");
+            }
+        };
+        this.switchOn = function () {
+            this.status = true;
+            alert("Switched On <3");
+        };
+        this.switchOff = function () {
+            this.status = false;
+            alert("Switched Off");
+        }
+    };
+    let ElectricLamp = function () {
+        this.statuss = false;
+        this.turnOns = function () {
+            this.statuss = true;
+            alert("Light Bulb Turned On <3");
+        };
+        this.turnOffs = function () {
+            this.statuss = false;
+            alert("Light Bulb Off");
+        }
+    };
+    let congtac = new SwitchButton();
+    let bongden = new ElectricLamp();
+    // bongden(congtac);
+    function on() {
+        bongden.turnOns(congtac.switchOn());
+    }
+    function off() {
+        bongden.turnOffs(congtac.switchOff());
+    }
+    function connection() {
+        congtac.connectToLamp();
+    }
+</script>
+</body>
+</html>
