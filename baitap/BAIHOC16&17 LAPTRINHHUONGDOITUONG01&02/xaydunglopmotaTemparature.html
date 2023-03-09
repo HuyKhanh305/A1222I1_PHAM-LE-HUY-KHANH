@@ -8,16 +8,14 @@
 <script>
     class Temperature {
         constructor(nhietDo) {
-            this.nhietDo = nhietDo;
+            if (nhietDo > -273) {
+                this.nhietDo = nhietDo;
+            } else {
+                alert("Nhiệt độ phải lớn hơn -273 độ");
+            }
+
         }
 
-        setnhietDo(newnhietDo) {
-            if (newnhietDo < -273) {
-                document.write("Nhap lai nhiet do")
-            } else {
-                this.nhietDo = newnhietDo;
-            }
-        }
 
         doCtodoF(){
             return this.nhietDo * 9 /5 + 32;
@@ -26,13 +24,12 @@
             return this.nhietDo + 273.15;
         }
     }
-
-    let temperature = new Temperature(25);
+    let c = prompt("Nhập vào độ C");
+    let temperature = new Temperature(c);
     let doF = temperature.doCtodoF();
     let doKevin = temperature.doCtodoKevin();
     document.write("ĐỘ C SANG ĐỘ F: "+ doF + "F" +"<br>");
     document.write("ĐỘ C SANG DỘ KEVIN: " + doKevin +"K");
-    // temperature.setnhietDo(-276);
 </script>
 </body>
 </html>
