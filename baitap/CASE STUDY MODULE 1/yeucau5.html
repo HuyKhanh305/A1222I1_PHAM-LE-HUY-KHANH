@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Mảng 2 chiều</title>
+</head>
+<body>
+<!--Bài 1: Viết hàm tính tổng các số chẵn trong ma trận có kích thước m*n. Với m, n là các số nhập từ bàn phím-->
+<script>
+    let arr = [];
+    let m = +prompt("Nhap vao kich thuoc mang");
+    let n = +prompt("Nhap vao kich thuoc mang");
+    for (let i = 0; i < m ; i++) {
+        arr[i] = [];
+        for (let j = 0; j < n ; j++) {
+            arr[i][j] = prompt("nhap vao");
+        }
+    }
+    document.write(arr);
+</script>
+</body>
+</html>

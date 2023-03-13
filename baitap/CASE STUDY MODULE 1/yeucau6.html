@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!--Xây dựng hệ thống quản lý học viên-->
+<button id="add" onclick="themvao()"> Thêm mới học viên </button>
+<button id="edit" onclick="chinhsua()"> Sửa thông tin học viên </button>
+<button id="delete" onclick="xoahocvien()"> Xóa học viên </button>
+<br> <br>
+<div id="studenttable">
+
+</div>
+<script>
+    class Student {
+        constructor(id, name, classroom, email, dOb, module) {
+            this.id = id;
+            this.name = name;
+            this.classroom = classroom;
+            this.email = email;
+            this.dOb = dOb;
+            this.module = module;
+        }
+
+        setNewStudent(id,name,classroom,email,dOb,module) {
+            return [id,name,classroom,email,dOb,module];
+        }
+    }
+
+    let student1 = new Student("HV-001","Nguyễn Văn A","A122I1","nguyenvana@gmail.com","01/01/2021",1)
+    let student2 = new Student("HV-002","Nguyễn Văn B","A122I2","nguyenvanb@gmail.com","12/03/2021",1)
+    let student3 = new Student("HV-003","Nguyễn Văn C","A122I3","nguyenvanc@gmail.com","20/06/2021",1)
+    let studentList = [student1,student2,student3];
+    displayList(studentList);
+
+    function displayList(list) {
+        let table = "<table>" +
+                "<tr>" +
+                "<td> Mã số</td>" +
+                "<td> Tên </td>" +
+                "<td> Lớp </td>" +
+                "<td> Email </td>" +
+                "<td> Ngày sinh </td>" +
+                "<td> Module </td>" +
+                "</tr>"
+
+        for (let i = 0; i < studentList.length ; i++) {
+            table += "<tr>" +
+                    "<td>"+ "HV"+ "00" + (i+1) + "</td>" +
+                    "<td>"+ (studentList[i].name) + "</td>" +
+                    "<td>"+ (studentList[i].classroom) + "</td>" +
+                    "<td>"+ (studentList[i].email) + "</td>" +
+                    "<td>"+ (studentList[i].dOb) + "</td>" +
+                    "<td>"+ (studentList[i].module) + "</td>" +
+                    "<tr>"
+        }
+        table += "</table>";
+        document.getElementById('studenttable').innerHTML = table;
+    }
+
+    function xoahocvien(id) {
+        studentList.splice(id,1);
+        displayList(studentList);
+    }
+
+    function themvao() {
+
+        displayList(studentList);
+    }
+
+</script>
+</body>
+</html>
