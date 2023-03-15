@@ -24,8 +24,19 @@
             this.module = module;
         }
 
-        setNewStudent(id,name,classroom,email,dOb,module) {
-            return [id,name,classroom,email,dOb,module];
+        function
+
+        themvao() {
+            let newName = enterName();
+            let newClassroom = enterClassroom();
+            let newEmail = enterEmail();
+            displayList(studentList);
+
+        }
+
+        enterName() {
+            let input = prompt("Nhap vao ma hoc vien (HV-XXXX");
+            return input;
         }
     }
 
@@ -38,12 +49,12 @@
     function displayList(list) {
         let table = "<table>" +
                 "<tr>" +
-                "<td> Mã số</td>" +
-                "<td> Tên </td>" +
-                "<td> Lớp </td>" +
-                "<td> Email </td>" +
-                "<td> Ngày sinh </td>" +
-                "<td> Module </td>" +
+                "<th> Mã số</th>" +
+                "<th> Tên </th>" +
+                "<th> Lớp </th>" +
+                "<th> Email </th>" +
+                "<th> Ngày sinh </th>" +
+                "<th> Module </th>" +
                 "</tr>"
 
         for (let i = 0; i < studentList.length ; i++) {
@@ -60,15 +71,17 @@
         document.getElementById('studenttable').innerHTML = table;
     }
 
-    function xoahocvien(id) {
-        studentList.splice(id,1);
-        displayList(studentList);
-    }
+    // function xoahocvien(id) {
+    //     let iddelete = prompt("Nhap ma hoc vien muon xoa");
+    //     for (let i = 0; i < studentList.length ; i++) {
+    //         if (iddelete == studentList[i]) {
+    //             alert("ban co muon xoa hoc vien nay");
+    //             studentList.splice(id,1);
+    //         }
+    //     }
+    // }
 
-    function themvao() {
 
-        displayList(studentList);
-    }
 
 </script>
 </body>

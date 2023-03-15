@@ -9,8 +9,9 @@
 <!--trong xâu không có 2 dấu cách liền nhau và bắt đầu mỗi từ phải in hoa. -->
 <!--Ví dụ tRuong    TaN   HAI => Truong Tan Hai.-->
 <script>
-    let arr = prompt("nhap vao mot chuoi");
-    let str = arr.toString();
+    let str = prompt("nhap vao mot chuoi");
+    let arr = str.split("")
+    console.log(arr)
     function fixString() {
         if (str) {
 

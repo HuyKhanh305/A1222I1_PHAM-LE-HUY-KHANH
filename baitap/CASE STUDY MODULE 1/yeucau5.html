@@ -8,15 +8,19 @@
 <!--Bài 1: Viết hàm tính tổng các số chẵn trong ma trận có kích thước m*n. Với m, n là các số nhập từ bàn phím-->
 <script>
     let arr = [];
+    let sum = 0;
     let m = +prompt("Nhap vao kich thuoc mang");
     let n = +prompt("Nhap vao kich thuoc mang");
     for (let i = 0; i < m ; i++) {
         arr[i] = [];
         for (let j = 0; j < n ; j++) {
             arr[i][j] = prompt("nhap vao");
+            if (arr[j]%2===0) {
+                sum += arr[j];
+            }
         }
-    }
-    document.write(arr);
+    } document.write(sum);
+    // document.write(arr);
 </script>
 </body>
 </html>
