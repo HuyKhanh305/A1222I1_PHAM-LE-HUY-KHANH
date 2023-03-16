@@ -56,7 +56,7 @@
 <!--            } else {-->
 <!--                flag = true;-->
 <!--            }-->
-<!--        } -->
+<!--        }-->
 <!--        if (flag) {-->
 <!--            document.write(arr2[i]);-->
 <!--        }-->
@@ -64,99 +64,110 @@
 <!--</script>-->
 
 <!--Bài 4: Tạo menu gọi món. Hiện danh sách menu -> bấm chọn hiện đơn giá và nhập vào số lượng -> hiện số tiền-->
-<!--<h1> MENU </h1>-->
-<!--<table>-->
-<!--    <tr>-->
-<!--        <td>-->
-<!--            <button onclick="mon1()"> 1</button>-->
-<!--        </td>-->
-<!--        <td> CAFE</td>-->
-<!--    </tr>-->
-<!--    <tr>-->
-<!--        <td>-->
-<!--            <button onclick="mon2()"> 2</button>-->
-<!--        </td>-->
-<!--        <td> CAM VẮT</td>-->
-<!--    </tr>-->
-<!--    <tr>-->
-<!--        <td>-->
-<!--            <button onclick="mon3()"> 3</button>-->
-<!--        </td>-->
-<!--        <td> NƯỚC ÉP CÀ RỐT</td>-->
-<!--    </tr>-->
-<!--    <tr>-->
-<!--        <td>-->
-<!--            <button onclick="mon4()"> 4</button>-->
-<!--        </td>-->
-<!--        <td> NƯỚC ÉP CÀ CHUA</td>-->
-<!--    </tr>-->
-<!--    <tr>-->
-<!--        <td>-->
-<!--            <button onclick="mon5()"> 5</button>-->
-<!--        </td>-->
-<!--        <td> NƯỚC LỌC</td>-->
-<!--    </tr>-->
-<!--    <tr>-->
-<!--        <td>-->
-<!--            <button onclick="mon6()"> 6</button>-->
-<!--        </td>-->
-<!--        <td> NƯỚC DỪA</td>-->
-<!--    </tr>-->
-<!--    <tr>-->
-<!--        <td>-->
-<!--            <button onclick="mon7()"> 7</button>-->
-<!--        </td>-->
-<!--        <td> THOÁT GỌI MÓN</td>-->
-<!--    </tr>-->
-<!--</table>-->
-<!--<script>-->
+<div>
+<h1 id="menu"> MENU </h1>
+<table>
+    <tr>
+        <td>
+            <button> 1</button>
+        </td>
+        <td> CAFE</td>
+    </tr>
+    <tr>
+        <td>
+            <button> 2</button>
+        </td>
+        <td> CAM VẮT</td>
+    </tr>
+    <tr>
+        <td>
+            <button> 3</button>
+        </td>
+        <td> NƯỚC ÉP CÀ RỐT</td>
+    </tr>
+    <tr>
+        <td>
+            <button> 4</button>
+        </td>
+        <td> NƯỚC ÉP CÀ CHUA</td>
+    </tr>
+    <tr>
+        <td>
+            <button> 5</button>
+        </td>
+        <td> NƯỚC LỌC</td>
+    </tr>
+    <tr>
+        <td>
+            <button> 6</button>
+        </td>
+        <td> NƯỚC DỪA</td>
+    </tr>
+    <tr>
+        <td>
+            <button> 7</button>
+        </td>
+        <td> THOÁT GỌI MÓN</td>
+    </tr>
+</table>
+<script>
 
-<!--    function mon1() {-->
-<!--        let a = prompt("Nhập vào số lượng");-->
-<!--        let price1 = 15000;-->
-<!--        alert("Đơn giá là: " + price1);-->
-<!--        document.write("Số tiền cần trả là: " + (a * price1));-->
-<!--    }-->
+    let a;
+    do {
+        // cách nào để hiển thị menu trước sau đó mới hiện input?
 
-<!--    function mon2() {-->
-<!--        let a = prompt("Nhập vào số lượng");-->
-<!--        let price2 = 30000;-->
-<!--        alert("Đơn giá là: " + price2);-->
-<!--        document.write("Số tiền cần trả là: " + (a * price2));-->
-<!--    }-->
+        let input = +prompt("Mời chọn món từ trong menu");
 
-<!--    function mon3() {-->
-<!--        let a = prompt("Nhập vào số lượng");-->
-<!--        let price3 = 25000;-->
-<!--        alert("Đơn giá là: " + price3);-->
-<!--        document.write("Số tiền cần trả là: " + (a * price3));-->
-<!--    }-->
+        switch (input) {
+            case 1 :
+                a = prompt("Nhập vào số lượng");
+                let price1 = 15000;
+                alert("Đơn giá là: " + price1);
+                alert("Số tiền cần trả là: " + (a * price1));
+                break;
 
-<!--    function mon4() {-->
-<!--        let a = prompt("Nhập vào số lượng");-->
-<!--        let price4 = 25000;-->
-<!--        alert("Đơn giá là: " + price4);-->
-<!--        document.write("Số tiền cần trả là: " + (a * price4));-->
-<!--    }-->
+            case 2 :
+                a = prompt("Nhập vào số lượng");
+                let price2 = 30000;
+                alert("Đơn giá là: " + price2);
+                alert("Số tiền cần trả là: " + (a * price2));
+                break;
 
-<!--    function mon5() {-->
-<!--        let a = prompt("Nhập vào số lượng");-->
-<!--        let price5 = 10000;-->
-<!--        alert("Đơn giá là: " + price5);-->
-<!--        document.write("Số tiền cần trả là: " + (a * price5));-->
-<!--    }-->
+            case 3 :
+                a = prompt("Nhập vào số lượng");
+                let price3 = 25000;
+                alert("Đơn giá là: " + price3);
+                alert("Số tiền cần trả là: " + (a * price3));
+                break;
 
-<!--    function mon6() {-->
-<!--        let a = prompt("Nhập vào số lượng");-->
-<!--        let price6 = 50000;-->
-<!--        alert("Đơn giá là: " + price6);-->
-<!--        document.write("Số tiền cần trả là: " + (a * price6));-->
-<!--    }-->
+            case 4 :
+                a = prompt("Nhập vào số lượng");
+                let price4 = 25000;
+                alert("Đơn giá là: " + price4);
+                alert("Số tiền cần trả là: " + (a * price4));
+                break;
 
-<!--    function mon7() {-->
-<!--        document.write("Cảm ơn quý khách đã gọi món");-->
-<!--    }-->
-<!--</script>-->
+            case 5 :
+                a = prompt("Nhập vào số lượng");
+                let price5 = 10000;
+                alert("Đơn giá là: " + price5);
+                alert("Số tiền cần trả là: " + (a * price5));
+                break;
+
+            case 6 :
+                a = prompt("Nhập vào số lượng");
+                let price6 = 50000;
+                alert("Đơn giá là: " + price6);
+                alert("Số tiền cần trả là: " + (a * price6));
+                break;
+
+            case 7:
+                alert("Cảm ơn quý khách đã gọi món");
+                break;
+        }
+    } while (input <= 7)
+
+</script>
 
 </body>
 </html>
