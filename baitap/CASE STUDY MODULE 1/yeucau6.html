@@ -33,31 +33,31 @@
             return this.name;
         }
         setName(newName){
-            return this.newName = newName;
+            return this.name = newName;
         }
         getClassroom(){
             return this.classroom;
         }
         setClassroom(newClassroom){
-            return this.newClassroom = newClassroom;
+            return this.classroom = newClassroom;
         }
         getEmail(){
             return this.email;
         }
         setEmail(newEmail){
-            return this.newEmail =  newEmail;
+            return this.email =  newEmail;
         }
         getDate(){
             return this.date;
         }
         setDate(newDate){
-            return this.newDate = newDate;
+            return this.date = newDate;
         }
         getModule(){
             return this.module;
         }
         setModule(newModule){
-            return this.newModule = newModule;
+            return this.module = newModule;
         }
     }
 
@@ -67,7 +67,7 @@
     let studentList = [student1,student2,student3];
     displayList(studentList);
 
-    function displayList(list) {
+    function displayList() {
         let table = "<table border='1'>" +
                 "<tr>" +
                 "<th> Mã số</th>" +
@@ -121,21 +121,19 @@
             if (edit === studentList[i].id) {
                 let a = prompt("Nhap lai ten hoc sinh");
                 studentList[i].setName(a);
-                displayList(studentList);
                 let b = prompt("Nhap lai lop hoc");
                 studentList[i].setClassroom(b);
-                displayList(studentList);
                 let c = prompt("Nhap lai email cua hoc sinh");
                 studentList[i].setEmail(c);
-                displayList(studentList);
                 let d = prompt("Nhap lai ngay sinh cua hoc sinh (dd/mm/yyyy)");
                 studentList[i].setDate(d);
-                displayList(studentList);
                 let e = prompt("Nhap lai module");
                 studentList[i].setModule(e);
-                displayList(studentList);
+                break;
             }
+
         }
+        displayList(studentList);
     }
 
 </script>
