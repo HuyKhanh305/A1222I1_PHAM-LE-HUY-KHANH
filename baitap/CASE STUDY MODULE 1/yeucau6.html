@@ -6,37 +6,58 @@
 </head>
 <body>
 <!--Xây dựng hệ thống quản lý học viên-->
-<button id="add" onclick="themvao()"> Thêm mới học viên </button>
-<button id="edit" onclick="chinhsua()"> Sửa thông tin học viên </button>
-<button id="delete" onclick="xoahocvien()"> Xóa học viên </button>
+<button id="add" onclick="themVao()"> Thêm mới học viên </button>
+<button id="edit" onclick="chinhSua()"> Sửa thông tin học viên </button>
+<button id="delete" onclick="xoaHocVien()"> Xóa học viên </button>
 <br> <br>
 <div id="studenttable">
 
 </div>
 <script>
     class Student {
-        constructor(id, name, classroom, email, dOb, module) {
+        constructor(id, name, classroom, email, date, module) {
             this.id = id;
             this.name = name;
             this.classroom = classroom;
             this.email = email;
-            this.dOb = dOb;
+            this.date = date;
             this.module = module;
         }
-
-        function
-
-        themvao() {
-            let newName = enterName();
-            let newClassroom = enterClassroom();
-            let newEmail = enterEmail();
-            displayList(studentList);
-
+        getId(id){
+            return this.id;
         }
-
-        enterName() {
-            let input = prompt("Nhap vao ma hoc vien (HV-XXXX");
-            return input;
+        setId(newId){
+          return this.newId = newId;
+        }
+        getName(){
+            return this.name;
+        }
+        setName(newName){
+            return this.newName = newName;
+        }
+        getClassroom(){
+            return this.classroom;
+        }
+        setClassroom(newClassroom){
+            return this.newClassroom = newClassroom;
+        }
+        getEmail(){
+            return this.email;
+        }
+        setEmail(newEmail){
+            return this.newEmail =  newEmail;
+        }
+        getDate(){
+            return this.date;
+        }
+        setDate(newDate){
+            return this.newDate = newDate;
+        }
+        getModule(){
+            return this.module;
+        }
+        setModule(newModule){
+            return this.newModule = newModule;
         }
     }
 
@@ -47,7 +68,7 @@
     displayList(studentList);
 
     function displayList(list) {
-        let table = "<table>" +
+        let table = "<table border='1'>" +
                 "<tr>" +
                 "<th> Mã số</th>" +
                 "<th> Tên </th>" +
@@ -59,11 +80,11 @@
 
         for (let i = 0; i < studentList.length ; i++) {
             table += "<tr>" +
-                    "<td>"+ "HV"+ "00" + (i+1) + "</td>" +
+                    "<td>"+ (studentList[i]).id + "</td>" +
                     "<td>"+ (studentList[i].name) + "</td>" +
                     "<td>"+ (studentList[i].classroom) + "</td>" +
                     "<td>"+ (studentList[i].email) + "</td>" +
-                    "<td>"+ (studentList[i].dOb) + "</td>" +
+                    "<td>"+ (studentList[i].date) + "</td>" +
                     "<td>"+ (studentList[i].module) + "</td>" +
                     "<tr>"
         }
@@ -71,17 +92,51 @@
         document.getElementById('studenttable').innerHTML = table;
     }
 
-    // function xoahocvien(id) {
-    //     let iddelete = prompt("Nhap ma hoc vien muon xoa");
-    //     for (let i = 0; i < studentList.length ; i++) {
-    //         if (iddelete == studentList[i]) {
-    //             alert("ban co muon xoa hoc vien nay");
-    //             studentList.splice(id,1);
-    //         }
-    //     }
-    // }
+    function xoaHocVien() {
+        let idDelete = prompt("Nhap ma hoc vien muon xoa");
+        for (let i = 0; i < studentList.length ; i++) {
+            if (idDelete === studentList[i].id) {
+                alert("ban co muon xoa hoc vien nay");
+                studentList.splice(i,1);
+                displayList(studentList);
+            }
+        }
+    }
 
+    function themVao() {
+        let maSo = prompt("Nhap ma hoc vien (HV-XXX)");
+        let ten = prompt("Nhap ten cua hoc sinh");
+        let lop = prompt("Nhap lop hoc");
+        let email = prompt("Nhap vao email cua hoc sinh")
+        let birth = prompt("Nhap ngay sinh cua hoc sinh (dd/mm/yyyy)");
+        let module = prompt("Nhap vao module dang hoc");
+        let studentNew = new Student(maSo,ten,lop,email,birth,module);
+        studentList.push(studentNew);
+        displayList(studentList);
+    }
 
+    function chinhSua() {
+        let edit = prompt("Nhap vao ma so hoc sinh muon chinh sua");
+        for (let i = 0; i < studentList.length; i++) {
+            if (edit === studentList[i].id) {
+                let a = prompt("Nhap lai ten hoc sinh");
+                studentList[i].setName(a);
+                displayList(studentList);
+                let b = prompt("Nhap lai lop hoc");
+                studentList[i].setClassroom(b);
+                displayList(studentList);
+                let c = prompt("Nhap lai email cua hoc sinh");
+                studentList[i].setEmail(c);
+                displayList(studentList);
+                let d = prompt("Nhap lai ngay sinh cua hoc sinh (dd/mm/yyyy)");
+                studentList[i].setDate(d);
+                displayList(studentList);
+                let e = prompt("Nhap lai module");
+                studentList[i].setModule(e);
+                displayList(studentList);
+            }
+        }
+    }
 
 </script>
 </body>
