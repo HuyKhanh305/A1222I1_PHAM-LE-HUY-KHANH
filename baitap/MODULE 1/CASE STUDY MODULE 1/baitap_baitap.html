@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>Quản lí công nhân</h1>
+<p id="hienThi"></p>
+<button onclick="addSv()">Thêm</button>
+</body>
+<script>
+    class CN{
+        constructor(Name,Ngaysinh ,Dc, Salary, Chucvu) {
+            this.name = Name;
+            this.ngaysinh= Ngaysinh;
+            this.dc = Dc;
+            this.luong= Salary;
+            this.chucvu =Chucvu;
+        }
+        getName(){
+            return this.name;
+        }getNgaysinh(){
+            return this.ngaysinh;
+        }
+        getDc(){
+            return this.dc;
+        }getSalary(){
+            return this.luong;
+        }getChucvu(){
+            return this.chucvu;
+        }
+    }
+    let CN1= new CN("Trương tấn C", "11-11-1997", "Quảng Nam", "2000", "Abc");
+    let CN2= new CN("Trương tấn A", "11-11-1998", "Đà Nẵng", "2001", "Abc");
+    let CN3= new CN("Trương tấn B", "11-11-1999", "Huế", "2002", "Abc");
+    let ds= [CN1,CN2,CN3];
+    showInfo(ds);
+    function showInfo(danhSach) {
+        let table = '<table border="1">\n' +
+            '    <tr>\n' +
+            '        <th>STT</th>\n' +
+            '        <th>Họ Và Tên</th>\n' +
+            '        <th>Ngày Sinh</th>\n' +
+            '        <th>Địa Chỉ</th>\n' +
+            '        <th>Lương</th>\n' +
+            '        <th>Chức Vụ</th>\n' +
+            '    </tr>';
+        for (let i = 0; i < danhSach.length; i++) {
+            table += '<tr>\n' +
+                '        <td>' +(i +1) + '</td>\n' +
+                '        <td>' + danhSach[i].getName() + '</td>\n' +
+                '        <td>' + danhSach[i].getNgaysinh() + '</td>\n' +
+                '        <td>' + danhSach[i].getDc() + '</td>\n' +
+                '        <td>' + danhSach[i].getSalary() + '</td>\n' +
+                '        <td>' + danhSach[i].getChucvu() + '</td>\n' +
+                '    </tr>';
+        }
+        table += '</table>';
+        document.getElementById("hienThi").innerHTML = table;
+    }
+    function addSv() {
+        let ten = prompt("nhập tên công nhân");
+        let birth = prompt("nhâp ngày sinh công nhân");
+        let diaChi = prompt("nhập địa chỉ công nhân");
+        let Salary = prompt("nhập lương công nhân");
+        let chucVu = prompt("nhập chức vụ công nhân");
+        let CNa = new CN(ten,birth,diaChi,Salary,chucVu);
+        ds.push(CNa);
+        showInfo(ds);
+    }
+
+
+</script>
+</html></html>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let n = +prompt("Nhap vao do dai mang");
+    let a = new Array(n);
+    while (a.length > 20) {
+        let newn = +prompt("Nhap lai do dai mang duoi 20");
+        a = new Array(newn);
+    }
+    if (a.length <= 20){
+        for (let i = 0; i < a.length; i++) {
+         a[i] = +prompt("Nhap gia tri cua mang");
+        }
+    }
+    document.write(a);
+
+    let tongChan = 0;
+    let tongLe = 0;
+    for (let j = 0; j < a.length; j++) {
+        if (a[j]%2===0){
+            tongChan += a[j];
+        } else {
+            tongLe += a[j];
+        }
+    }
+
+    document.write("<br>"+ (tongChan - tongLe));
+
+</script>
+</body>
+</html>

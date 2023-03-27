@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+
+    function isPrime(nums) {
+        let flag = true;
+        if (nums < 2) {
+            flag = false;
+        } else {
+            for (let i = 2; i < nums; i++) {
+                if (nums % i === 0) {
+                    flag = false;
+                    break;
+                } else {
+                    flag = true;
+                }
+            }
+            if (flag===true) {
+                return (nums + " ");
+            }
+        }
+    }
+
+
+    let arr1 = [1,2,6,23,8,47,10,3,5];
+    let arr2 = [];
+
+    for (let k = 0; k < arr1.length; k++) {
+        if (isPrime(arr1[k])){
+            arr2.push(arr1[k]);
+            arr2.sort(function (a, b) {
+                return a -b;
+            });
+        }
+    }
+
+    document.write(arr2);
+</script>
+</body>
+</html>

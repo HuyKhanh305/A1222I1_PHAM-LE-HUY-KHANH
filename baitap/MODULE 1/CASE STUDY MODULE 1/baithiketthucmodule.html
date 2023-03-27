@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!--Câu 1:-->
+<!--<script>-->
+
+<!--    let n = +prompt("Nhap vao do dai mang");-->
+<!--    let a = new Array(n);-->
+<!--    while (a.length > 50) {-->
+<!--        let newn = +prompt("Nhap lai do dai mang duoi 50");-->
+<!--        a = new Array(newn);-->
+<!--    }-->
+<!--    if (a.length <= 50){-->
+<!--        for (let i = 0; i < a.length; i++) {-->
+<!--         a[i] = +prompt("Nhap gia tri cua mang");-->
+<!--        }-->
+<!--    }-->
+
+<!--    function kiemTraMang(arr) {-->
+<!--        let check=true;-->
+<!--        for (let j = 0; j < arr.length - 2; j++) {-->
+<!--            if (((arr[j] < arr[j + 1]) && (arr[j] < arr[j + 2])) || ((arr[j] > arr[j + 1]) && (arr[j] > arr[j + 2]))) {-->
+<!--                check=true;-->
+<!--            }-->
+<!--            else{-->
+<!--                check=false;-->
+<!--                break;-->
+<!--            }-->
+
+<!--        }-->
+<!--        if(check===true){-->
+<!--            alert("true");-->
+<!--        } else {-->
+<!--            alert("false");-->
+<!--        }-->
+<!--    }-->
+<!--    kiemTraMang(a);-->
+<!--    document.write(a);-->
+<!--</script>-->
+
+<!--Câu 2:-->
+<!--<script>-->
+<!--    let input = prompt("Nhap vao ngay thang nam can kiem tra (dd/MM/yyyy");-->
+<!--    let flag = false;-->
+<!--    let p = input.split("");-->
+
+<!--    if (p.length !== 8){-->
+<!--        let input = prompt("Nhap lai dung dinh dang (8 ký tự)");-->
+<!--    }-->
+
+<!--    let year = parseInt(input.substring(4));-->
+
+<!--    // function checkInput() {-->
+<!--    //         // for (let i = 0; i < p.length; i++) {-->
+<!--    //-->
+<!--    //     // }-->
+<!--    // }-->
+
+<!--    function checkNamNhuan() {-->
+<!--                if (year % 4 === 0 && year %100 !==0 || year % 100 === 0 && year % 400 === 0) {-->
+<!--                    document.write(year + " là năm nhuận");-->
+<!--                } else {-->
+<!--                    document.write(year + " không phải là năm nhuận")-->
+<!--                }-->
+<!--        }-->
+<!--    // let year = prompt("Nhap nam");-->
+<!--    checkNamNhuan(year);-->
+
+<!--</script>-->
+
+<!--Câu 3: -->
+<!--<button id="add" onclick="addMotor()"> Thêm mới xe</button>-->
+<!--<button id="delete" onclick="deleteMotor()"> Xóa xe</button>-->
+<!--<br> <br>-->
+<!--<div id="motorTable">-->
+
+<!--</div>-->
+<!--<script>-->
+<!--    class Motor {-->
+<!--        constructor(plateNumber, names, idCard, brand, price) {-->
+<!--            this.plateNumber = plateNumber;-->
+<!--            this.names = names;-->
+<!--            this.idCard = idCard;-->
+<!--            this.brand = brand;-->
+<!--            this.price = price;-->
+<!--        }-->
+<!--    }-->
+
+<!--    let xe1 = new Motor("43C-5565", "Nguyễn Văn A", "201334466", "Honda", "30000");-->
+<!--    let xe2 = new Motor("47C-4322", "Nguyễn Văn B", "203434345", "Suzuki", "50000");-->
+<!--    let xe3 = new Motor("50C-2326", "Nguyễn Văn C", "208332434", "Honda", "60000");-->
+<!--    let ds = [xe1, xe2, xe3];-->
+<!--    showInfo(ds);-->
+
+
+<!--    function showInfo() {-->
+<!--        let table = '<table border="1">\n' +-->
+<!--            '    <tr>\n' +-->
+<!--            '        <th> Biển số xe</th>\n' +-->
+<!--            '        <th> Họ và tên </th>\n' +-->
+<!--            '        <th> CMND </th>\n' +-->
+<!--            '        <th> Hãng xe máy </th>\n' +-->
+<!--            '        <th> Phí đã nộp</th>\n' +-->
+<!--            '    </tr>';-->
+<!--        for (let i = 0; i < ds.length; i++) {-->
+<!--            table += '<tr>\n' +-->
+<!--                '        <td>' + ds[i].plateNumber + '</td>\n' +-->
+<!--                '        <td>' + ds[i].names + '</td>\n' +-->
+<!--                '        <td>' + ds[i].idCard + '</td>\n' +-->
+<!--                '        <td>' + ds[i].brand + '</td>\n' +-->
+<!--                '        <td>' + ds[i].price + '</td>\n' +-->
+<!--                '    </tr>';-->
+<!--        }-->
+<!--        table += '</table>';-->
+<!--        document.getElementById('motorTable').innerHTML = table;-->
+<!--    }-->
+
+
+<!--    function deleteMotor() {-->
+<!--        let idDelete = prompt("Nhap so xe hoc vien muon xoa");-->
+<!--        for (let i = 0; i < ds.length; i++) {-->
+<!--            if (idDelete === ds[i].plateNumber) {-->
+<!--                alert("ban co muon xoa xe nay");-->
+<!--                ds.splice(i, 1);-->
+<!--                showInfo(ds);-->
+<!--            }-->
+<!--        }-->
+<!--    }-->
+
+<!--    function checkPlate(plate) {-->
+<!--        let p = plate;-->
+<!--        while (p.length > 10) {-->
+<!--            p = prompt("Nhap lai bien so xe(duoi 10 ky tu)");-->
+<!--        }-->
+<!--    }-->
+
+<!--    function checkName(name) {-->
+<!--        let n = name;-->
+<!--        while (n.length > 40) {-->
+<!--           n = prompt("Nhập lại tên (dưới 40 ký tự)");-->
+<!--        }-->
+<!--    }-->
+
+<!--    function addMotor() {-->
+<!--        let bienSo = prompt("Nhap bien so xe");-->
+<!--        checkPlate(bienSo);-->
+<!--        let ten = prompt("Nhap ten cua hoc sinh");-->
+<!--        checkName(ten);-->
+<!--        let id = prompt("Nhap vao chung minh nhan dan");-->
+<!--        let brand = prompt("Nhap vao hang xe cua hoc sinh")-->
+<!--        let soTien = prompt("Nhap vao so tien da nop");-->
+<!--        let motorNew = new Motor(bienSo, ten, id, brand, soTien);-->
+<!--        alert("đã thêm xe thành công");-->
+<!--        ds.push(motorNew);-->
+<!--        showInfo(ds);-->
+<!--    }-->
+
+
+<!--</script>-->
+
+</body>
+</html>

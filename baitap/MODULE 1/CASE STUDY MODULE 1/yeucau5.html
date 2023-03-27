@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Mảng 2 chiều</title>
+</head>
+<body>
+<!--Bài 1: Viết hàm tính tổng các số chẵn trong ma trận có kích thước m*n. Với m, n là các số nhập từ bàn phím-->
+<!--<script>-->
+<!--    let arr = [];-->
+<!--    let sum = 0;-->
+<!--    let m = +prompt("Nhap vao so hang");-->
+<!--    let n = +prompt("Nhap vao so cot");-->
+<!--    function tinhTongSoChan(m,n) {-->
+<!--        for (let i = 0; i < m ; i++) {-->
+<!--            arr[i] = [];-->
+<!--            for (let j = 0; j < n ; j++) {-->
+<!--                arr[i][j] = +prompt("nhap vao");-->
+<!--                if (arr[i][j]%2===0) {-->
+<!--                    sum += arr[i][j];-->
+<!--                }-->
+<!--            }-->
+<!--        } document.write(sum);-->
+<!--    }-->
+<!--    -->
+<!--    tinhTongSoChan(m,n);-->
+<!--</script>-->
+
+<!--Bài 2: Viết hàm liệt kê các số nguyên tố trong mảng 2 chiều, đếm các số nguyên tố có trong mảng đó.-->
+<!--<script>-->
+<!--    let arr = [-->
+<!--        [2,3,9],-->
+<!--        [1,5,7],-->
+<!--        [6,10,11]-->
+<!--    ];-->
+
+<!--    let arr1 = [];-->
+
+<!--    function checkSoNguyenTo(num) {-->
+<!--                if (num < 2) {-->
+<!--                    return false;-->
+<!--                } else {-->
+<!--                    for (let i = 2; i <= Math.sqrt(num); i++) {-->
+<!--                        if (num%i===0) {-->
+<!--                            return false;-->
+<!--                    }-->
+<!--                }-->
+<!--                    return true;-->
+<!--                }-->
+<!--        }-->
+
+<!-- function showSoNguyenTo() {-->
+<!--     let count = 0;-->
+<!--     for (let i = 0; i < arr.length ; i++) {-->
+<!--         for (let j = 0; j < arr[i].length; j++) {-->
+<!--             if (checkSoNguyenTo(arr[i][j])) {-->
+<!--                 arr1.push(arr[i][j]);-->
+<!--                 count++;-->
+<!--             }-->
+<!--         }-->
+<!--     }-->
+<!--     document.write("Các số nguyên tố trong mảng là "+ arr1 +"<br>");-->
+<!--    document.write("Có "+ count + " số nguyên tố trong mảng");-->
+<!-- }-->
+
+<!-- showSoNguyenTo(arr);-->
+<!--</script>-->
+
+<!--Bài 3: Viết hàm tìm giá trị lớn nhất, nhỏ nhất trong mảng 2 chiều-->
+<!--<script>-->
+<!--    let arr = [-->
+<!--        [2, 3, 9],-->
+<!--        [1, 5, 7],-->
+<!--        [6, 10, 11]-->
+<!--    ];-->
+
+<!--    function findMax() {-->
+<!--        let max = arr[0][0];-->
+<!--        for (let i = 0; i < arr.length; i++) {-->
+<!--            for (let j = 0; j < arr[i].length; j++) {-->
+<!--                if (max < arr[i][j]) {-->
+<!--                    max = arr[i][j];-->
+<!--                }-->
+<!--            }-->
+<!--        }-->
+<!--        document.write("Giá trị lớn nhất là " + max);-->
+<!--    }-->
+
+<!--    function findMin() {-->
+<!--        let min = arr[0][0];-->
+<!--        for (let i = 0; i < arr.length; i++) {-->
+<!--            for (let j = 0; j < arr[i].length; j++) {-->
+<!--                if (min > arr[i][j]) {-->
+<!--                    min = arr[i][j];-->
+<!--                }-->
+<!--            }-->
+<!--        }-->
+<!--        document.write("<br>"+"Giá trị nhỏ nhất là " + min);-->
+<!--    }-->
+
+<!--    findMax(arr);-->
+<!--    findMin(arr);-->
+<!--</script>-->
+</body>
+</html>

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!--/Bài 1: Viết chương trình khởi tạo mảng 2 chiều, gồm một bộ các phần tử có sẵn,  in ra các phần tử trong mảng. -->
+<!--Chú ý: Sử dụng vòng lặp for lồng nhau-->
+<!--<script>-->
+<!--    let a = [-->
+<!--        [1, 2, 1, 24],-->
+<!--        [8, 11, 9, 4],-->
+<!--        [7, 0, 7, 27],-->
+<!--        [7, 4, 28, 14],-->
+<!--        [3, 10, 26, 7]-->
+<!--    ];-->
+<!--    for (let row in a) {-->
+<!--        document.write("<br>" + "row "+ row);-->
+<!--        for (let collum in a[row]) {-->
+<!--            document.write("<br>" + a[row][collum]);-->
+<!--        }-->
+<!--    }-->
+<!--</script>-->
+
+<!--Bài 2: Viết một chương trình để in các ký tự trong một mảng theo thứ tự đảo ngược. -->
+<!--Ví dụ, nếu một mảng chứa các ký tự  [ 'c', 's', 'c', '2', '6', '1' ] sau khi thực hiện đảo ngược sẽ là "162csc"-->
+<!--<script>-->
+<!--    let arr = [];-->
+<!--    for (let i = 0; i < 7 ; i++) {-->
+<!--        arr[i] = prompt("Nhập 7 ký tự bất kỳ");-->
+<!--    }-->
+<!--    arr.reverse(function (a,b) {-->
+<!--        return b-a;-->
+<!--    })-->
+<!--    document.write(arr);-->
+<!--</script>-->
+
+<!--Bài 3: Viết một chương trình khai báo một mảng ký tự và kích thước của mảng. -->
+<!--Chương trình này đếm số ký tự số trong mảng.-->
+<!--<script>-->
+<!--    let arr = [];-->
+<!--    let count = 0;-->
+<!--    let k = prompt("Nhap vao kich thuoc cua mang")-->
+<!--    for (let i = 0; i < k ; i++) {-->
+<!--        arr[i] = prompt("Nhap vao ky tu");-->
+<!--    }-->
+<!--    for (let i in arr) {-->
+<!--        if (!isNaN(Number(arr[i])))-->
+<!--            count++;-->
+<!--    }-->
+<!--    document.write("So ky tu so trong mang la: " + count);-->
+<!--</script>-->
+
+<!--Bài 4: Viết một chương trình để đếm số từ trong một chuỗi-->
+<!--<script>-->
+<!--    let a = prompt("Nhap vao 1 cau");-->
+<!--    let str = a.toString();-->
+<!--    document.write(str.split(" ").length);-->
+<!--</script>-->
+
+<!--Bài 5: Viết một chương trình nhập vào 2 chuỗi, sau đó kiểm tra xem hai chuỗi có giống nhau hay không.-->
+<!--<script>-->
+<!--    let str1 = prompt("Nhap vao chuoi dau tien");-->
+<!--    let str2 = prompt("Nhap vao chuoi thu hai");-->
+<!--    let res1 = str1.split(" ");-->
+<!--    let res2 = str2.split(" ");-->
+<!--    let flag = true;-->
+<!--    for (let i = 0; i < res1.length; i++) {-->
+<!--        if (res1[i] !== res2[i]) {-->
+<!--            flag = false;-->
+<!--            document.write("2 chuoi khac nhau");-->
+<!--        }-->
+<!--    }-->
+<!--    if (flag === true) {-->
+<!--        document.write("2 chuoi giong nhau");-->
+<!--    }-->
+<!--</script>-->
+
+<!--Bài 6: Viết chương trình nhập vào một mảng ký tự, -->
+<!--tìm tất cả các ký tự trong mảng là (-) và thay thế các ký tự này bởi ký tự ( _ )-->
+<!--<script>-->
+<!--    let str = prompt("Nhập vào chuỗi bất kỳ");-->
+<!--    let array =[];-->
+<!--    for (let i=0; i < str.length;i++){-->
+<!--        array[i]= str.slice(i,i+1);-->
+<!--        if(array[i] ==='-'){-->
+<!--            array.splice(i,1,'_');-->
+<!--        }-->
+<!--    }-->
+<!--    document.write(array.join(""));-->
+<!--</script>-->
+</body>
+</html>

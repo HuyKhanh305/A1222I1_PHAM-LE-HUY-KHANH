@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 4</title>
+</head>
+<body>
+<button id="add" onclick="addMobile()"> Thêm mới điện thoại</button>
+<br> <br>
+<div id="motorTable">
+
+</div>
+<script>
+    class Mobile {
+        constructor(id, names, brand, price) {
+            this.id = id;
+            this.names = names;
+            this.brand = brand;
+            this.price = price;
+        }
+
+        getId() {
+            return this.id;
+        }
+
+        setId(newId){
+            this.id = newId;
+        }
+
+        getNames(){
+            return this.names;
+        }
+        setNames(newName){
+            this.names = newName;
+        }
+
+        getBrand(){
+            return this.brand;
+        }
+        setBrand(newBrand){
+            this.brand = newBrand;
+        }
+
+        getPrice(){
+            return this.price;
+        }
+        setPrice(newPrice){
+            this.price = newPrice;
+        }
+
+        checkToString(){
+            this.id.toString();
+            this.names.toString();
+            this.brand.toString();
+            this.price.toString();
+        }
+    }
+
+    let mobile1 = new Mobile("5565", "Sokia", "Micro", "3000000");
+    let mobile2 = new Mobile("4322", "Bamsung", "Sungson", "5000000");
+    let mobile3 = new Mobile("2326", "Iphone", "Apple", "6000000");
+    let ds = [mobile1, mobile2, mobile3];
+    showInfo(ds);
+
+    function showInfo() {
+        let table = '<table border="1">\n' +
+            '    <tr>\n' +
+            '        <th> Mã điện thoại </th>\n' +
+            '        <th> Tên điện thoại </th>\n' +
+            '        <th> Hãng điện thoại </th>\n' +
+            '        <th> Giá tiền </th>\n' +
+            '    </tr>';
+        for (let i = 0; i < ds.length; i++) {
+            table += '<tr>\n' +
+                '        <td>' + ds[i].id + '</td>\n' +
+                '        <td>' + ds[i].names + '</td>\n' +
+                '        <td>' + ds[i].brand + '</td>\n' +
+                '        <td>' + ds[i].price + '</td>\n' +
+                '    </tr>';
+        }
+        table += '</table>';
+        document.getElementById('motorTable').innerHTML = table;
+    }
+
+
+    function addMobile() {
+        let id = prompt("Nhap vao ma dien thoai");
+        let ten = prompt("Nhap ten dien thoai");
+        let brand = prompt("Nhap vao hang dien thoai")
+        let soTien = prompt("Nhap vao gia tien");
+        let mobileNew = new Mobile(id, ten, brand, soTien);
+        alert("đã thêm điện thoại thành công");
+        ds.push(mobileNew);
+        showInfo(ds);
+    }
+
+    // mobile1.setId("2233243");
+    // showInfo(mobile1);
+
+</script>
+</body>
+</html>
