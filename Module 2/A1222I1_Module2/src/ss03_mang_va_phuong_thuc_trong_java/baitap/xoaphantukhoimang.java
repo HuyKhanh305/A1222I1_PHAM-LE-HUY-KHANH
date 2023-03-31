@@ -13,11 +13,11 @@ public class xoaphantukhoimang {
         }
         System.out.println("Nhap phan tu can xoa");
         int x = sc.nextInt();
-        int count = 0;
+        int index = 0;
         for (int i = 0; i < arr.length; i++) {
             if (arr[i] == x) {
-                 count += i;
-                for (int j = count; j < arr.length -1 ; j++) {
+                 index += i;
+                for (int j = index; j < arr.length -1 ; j++) {
                     arr[j] = arr[j + 1];
                 }
                 if (x == arr[arr.length-1]){

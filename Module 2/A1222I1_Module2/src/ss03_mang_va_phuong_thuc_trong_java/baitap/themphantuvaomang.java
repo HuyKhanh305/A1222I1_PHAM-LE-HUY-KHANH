@@ -3,7 +3,7 @@ package ss03_mang_va_phuong_thuc_trong_java.baitap;
 import java.util.Scanner;
 
 public class themphantuvaomang {
-    static int[] arr = new int[10];
+    static int[] arr = new int[6];
 
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
@@ -15,16 +15,16 @@ public class themphantuvaomang {
         int x = sc.nextInt();
         System.out.println("Nhap vao vi tri can chen");
         int index = sc.nextInt();
-        if (index <= 1 && index >= (arr.length - 1)){
-            System.out.println("Khong chen duoc vao mang");
-        } else {
-            for (int j = 0; j < arr.length ; j++) {
-                arr[index] = x;
-                arr[j+1] = index+1;
+        if (index > 0 && index <= (arr.length - 1)) {
+            for (int j = arr.length - 1; j > index; j--) {
+                arr[j] = arr[j - 1];
             }
+            arr[index] = x;
+        } else {
+            System.out.println("Khong chen duoc vao mang");
         }
-        for (int value : arr){
-            System.out.println(value);
+        for (int value : arr) {
+            System.out.print(value+" ");
         }
     }
 }

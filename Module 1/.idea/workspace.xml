@@ -20,13 +20,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="60d99453-29a1-4d6f-b86c-6de7e29bd4b4" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../Module 2/A1222I1_Module2/src/ss02_loop_statement/baitap/hienthi20songuyento.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Module 2/A1222I1_Module2/src/ss02_loop_statement/baitap/hienthicacloaihinh.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Module 2/A1222I1_Module2/src/ss02_loop_statement/baitap/hienthisonguyennhohon100.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Module 2/A1222I1_Module2/src/ss03_mang_va_phuong_thuc_trong_java/baitap/gopmang.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Module 2/A1222I1_Module2/src/ss03_mang_va_phuong_thuc_trong_java/baitap/themphantuvaomang.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Module 2/A1222I1_Module2/src/ss03_mang_va_phuong_thuc_trong_java/baitap/xoaphantukhoimang.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Module 2/A1222I1_Module2/src/ss03_mang_va_phuong_thuc_trong_java/baitap/timphantumaxtrongmang2chieu.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Module 2/A1222I1_Module2/out/production/A1222I1_Module2/ss03_mang_va_phuong_thuc_trong_java/baitap/themphantuvaomang.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Module 2/A1222I1_Module2/out/production/A1222I1_Module2/ss03_mang_va_phuong_thuc_trong_java/baitap/themphantuvaomang.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Module 2/A1222I1_Module2/out/production/A1222I1_Module2/ss03_mang_va_phuong_thuc_trong_java/baitap/xoaphantukhoimang.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Module 2/A1222I1_Module2/out/production/A1222I1_Module2/ss03_mang_va_phuong_thuc_trong_java/baitap/xoaphantukhoimang.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Module 2/A1222I1_Module2/src/ss03_mang_va_phuong_thuc_trong_java/baitap/themphantuvaomang.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Module 2/A1222I1_Module2/src/ss03_mang_va_phuong_thuc_trong_java/baitap/themphantuvaomang.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Module 2/A1222I1_Module2/src/ss03_mang_va_phuong_thuc_trong_java/baitap/xoaphantukhoimang.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Module 2/A1222I1_Module2/src/ss03_mang_va_phuong_thuc_trong_java/baitap/xoaphantukhoimang.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -111,6 +109,7 @@
       <workItem from="1679471632776" duration="7987000" />
       <workItem from="1679487297855" duration="12487000" />
       <workItem from="1680108057486" duration="2205000" />
+      <workItem from="1680199615500" duration="31000" />
     </task>
     <servers />
   </component>
