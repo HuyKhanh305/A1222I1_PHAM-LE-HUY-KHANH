@@ -1,6 +1,6 @@
 package ss02_loop_statement.baitap;
 
-public class hienthisonguyennhohon100 {
+public class HienThiSoNguyenNhoHon100 {
     public static boolean isPrime(int n) {
         if (n < 2){
             return false;

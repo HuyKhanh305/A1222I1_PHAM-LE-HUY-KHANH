@@ -2,7 +2,7 @@ package ss02_loop_statement.baitap;
 
 import java.util.Scanner;
 
-public class hienthicacloaihinh {
+public class HienThiCacLoaiHinh {
     public static void main(String[] args) {
         int choice = -1;
         Scanner input = new Scanner(System.in);

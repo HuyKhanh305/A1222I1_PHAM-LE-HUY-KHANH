@@ -3,7 +3,7 @@ package ss03_mang_va_phuong_thuc_trong_java.baitap;
 //import java.util.Arrays;
 import java.util.Scanner;
 
-public class gopmang {
+public class GopMang {
     static int[] arr1 = new int[4];
     static int[] arr2 = new int[4];
     static int[] arr3 = new int[arr1.length + arr2.length];

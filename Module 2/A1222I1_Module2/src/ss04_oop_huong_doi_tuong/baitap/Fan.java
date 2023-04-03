@@ -69,5 +69,4 @@ public class Fan {
         fan2.setOn(!fan2.isOn());
         System.out.println(fan2+ "\n");
     }
-
 }

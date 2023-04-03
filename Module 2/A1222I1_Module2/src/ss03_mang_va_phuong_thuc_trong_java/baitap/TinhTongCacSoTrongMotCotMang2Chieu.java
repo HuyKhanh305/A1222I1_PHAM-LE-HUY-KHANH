@@ -4,7 +4,7 @@ package ss03_mang_va_phuong_thuc_trong_java.baitap;
 
 import java.util.Scanner;
 
-public class tinhTongCacSoTrongMotCot_Mang2Chieu {
+public class TinhTongCacSoTrongMotCotMang2Chieu {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Nhap vao so luong cot cua mang 2 chieu");

@@ -2,7 +2,7 @@ package ss01_introduction_to_Java.baitap;
 
 import java.util.Scanner;
 
-public class readNumberToWord {
+public class ReadNumberToWord {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         int num;

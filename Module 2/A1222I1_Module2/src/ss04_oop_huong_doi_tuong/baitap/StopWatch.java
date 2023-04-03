@@ -1,11 +1,9 @@
 package ss04_oop_huong_doi_tuong.baitap;
 
 import java.time.LocalTime;
-import java.util.Calendar;
-
 public class StopWatch {
-private final long startTime = Calendar.getInstance().getTimeInMillis();
-private final long endTime = Calendar.getInstance().getTimeInMillis();
+private long startTime;
+private long endTime;
 
     public long getStart() {
         return startTime;
@@ -19,44 +17,49 @@ private final long endTime = Calendar.getInstance().getTimeInMillis();
         return java.time.LocalTime.now();
     }
 
-    public long start(){
-        return System.currentTimeMillis();
+    public void start(){
+        this.startTime = System.currentTimeMillis();
     }
-    public long end(){
-        return System.currentTimeMillis();
+    public void end(){
+        this.endTime = System.currentTimeMillis();
     }
     public long getElapsedTime(){
-        return end() - start();
+        return (endTime - startTime);
     }
 
-    public void selectionSort(int[] arr){
+    public void selectionSort(long[] arr){
+        long min = arr[0];
         start();
-        for (int i = 0; i < arr.length-1; i++) {
-            int min = i;
+        for (int i = 0; i < arr.length; i++) {
             for (int j = i+1; j < arr.length; j++) {
-                if (arr[j] < arr[min]){
+                if (arr[j] < min){
                     min = j;
                 }
-
-                int temp = arr[min];
-                arr[min] = arr[i];
-                arr[i] = temp;
             }
+            long temp = min;
+            min = arr[i];
+            arr[i] = temp;
         }
 
-        for (int value : arr) {
-            System.out.print(arr[value]);
-        }
+//        for (long value : arr) {
+//            System.out.print(arr[value]);
+//        }
         end();
         }
 
     public static void main(String[] args) {
         StopWatch watch1 = new StopWatch();
+        long[] array = new long[100000];
         System.out.println(watch1.startTime());
-        int[] array = {65,35,50,78,40,21,30,55,25};
+//        long time1 = watch1.getStart();
+//        System.out.println(time1);
+//        long time2 = watch1.getEnd();
+//        System.out.println(time2);
+//        watch1.start();
         watch1.selectionSort(array);
+//        watch1.end();
         long kq = watch1.getElapsedTime();
-        System.out.println(kq);
+        System.out.println("Thời gian tính toán là: "+ kq + " mls");
     }
 }
 

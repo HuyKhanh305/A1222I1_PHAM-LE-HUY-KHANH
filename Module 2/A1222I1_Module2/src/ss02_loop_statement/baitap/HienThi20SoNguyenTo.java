@@ -2,7 +2,7 @@ package ss02_loop_statement.baitap;
 
 import java.util.Scanner;
 
-public class hienthi20songuyento {
+public class HienThi20SoNguyenTo {
     public static boolean isPrime(int n){
         if (n < 2){
             return false;

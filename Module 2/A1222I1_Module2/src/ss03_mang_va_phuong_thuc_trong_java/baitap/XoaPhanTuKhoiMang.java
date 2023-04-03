@@ -2,7 +2,7 @@ package ss03_mang_va_phuong_thuc_trong_java.baitap;
 
 import java.util.Scanner;
 
-public class xoaphantukhoimang {
+public class XoaPhanTuKhoiMang {
     static int[] arr = new int[6];
 
     public static void main(String[] args) {

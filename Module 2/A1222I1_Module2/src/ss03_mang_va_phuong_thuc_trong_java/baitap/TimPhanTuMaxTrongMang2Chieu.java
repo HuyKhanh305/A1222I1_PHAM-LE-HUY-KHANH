@@ -2,7 +2,7 @@ package ss03_mang_va_phuong_thuc_trong_java.baitap;
 
 import java.util.Scanner;
 
-public class timphantumaxtrongmang2chieu {
+public class TimPhanTuMaxTrongMang2Chieu {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         System.out.println("Nhap so luong cot cua mang 2 chieu");

@@ -3,7 +3,7 @@ package ss03_mang_va_phuong_thuc_trong_java.baitap;
 
 import java.util.Scanner;
 
-public class demSoLanXuatHienKyTuTrongChuoi {
+public class DemSoLanXuatHienKyTuTrongChuoi {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         String str = "hellocodegym";
