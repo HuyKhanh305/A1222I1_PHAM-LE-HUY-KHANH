@@ -6,39 +6,26 @@ public class mang2Chieu_TinhTongDuongCheo {
 
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        int[][] daySo = new int[3][3];
+        System.out.println("Nhap kich thuoc mang 2 chieu ");
+        int size = scanner.nextInt();
+        int[][] daySo = new int[size][];
         System.out.println("Nhap gia tri cua mang 2 chieu");
         for (int i = 0; i < daySo.length; i++) {
+            daySo[i] = new int[size];
             for (int j = 0; j < daySo[i].length; j++) {
                 daySo[i][j] = scanner.nextInt();
             }
         }
-
-        findSum(daySo);
-    }
-
-    static void findSum(int [][] arr){
-//        int [][] array = {
-//                {1,3,2},
-//                {2,1,5},
-//                {3,2,4}
-//        };
-
-        int sum = arr[0][0];
-        for (int i = 0; i < arr.length; i++) {
-            for (int j = 0; j < arr[i].length; j++) {
-                if (i == j){
-                    sum += arr[i][j];
-                }
+        for (int[] value: daySo) {
+            for (int v : value) {
+                System.out.print(v+" ");
             }
         }
-        for (int i = 0; i < arr.length; i++) {
-            for (int j = 0; j < arr.length; j++) {
-                if ((arr[i].length-i) == j){
-                    sum += arr[i][j];
-                }
-            }
+
+        int sum = 0;
+        for (int i = 0; i < daySo.length; i++) {
+            sum += daySo[i][i];
         }
-        System.out.println(sum);
+        System.out.println("Tong duong cheo la: " + sum);
     }
 }
