@@ -1,4 +1,4 @@
-package ss05_access_modifier_static_method.baitap;
+package ss05_access_modifier_static_method.baitap.accessmodifier;
 
 public class Circle {
     private static double radius;

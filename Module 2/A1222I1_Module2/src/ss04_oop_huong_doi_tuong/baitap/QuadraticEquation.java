@@ -3,42 +3,42 @@ package ss04_oop_huong_doi_tuong.baitap;
 import java.util.Scanner;
 
 public class QuadraticEquation {
-    private final double a, b, c;
+    private final double A, B, C;
 
     public QuadraticEquation(double a, double b, double c) {
-        this.a = a;
-        this.b = b;
-        this.c = c;
+        this.A = a;
+        this.B = b;
+        this.C = c;
     }
 
     public double getA() {
-        return a;
+        return A;
     }
 
     public double getB() {
-        return b;
+        return B;
     }
 
     public double getC() {
-        return c;
+        return C;
     }
 
     double delta;
 
     public double getDiscriminant() {
-        return delta = (b * b - 4 * a * c);
+        return delta = (B * B - 4 * A * C);
     }
 
 
     public String giaiPhuongTrinh() {
         String kq = "";
-        if (a == 0 || b == 0) {
+        if (A == 0 || B == 0) {
             System.out.println("Phuong trinh bac 2 nhap a khac 0");
         } else {
             if (getDiscriminant() < 0) {
                 kq += "Phuong trinh vo nghiem ";
             } else if (getDiscriminant() == 0) {
-                kq += "Phuong trinh co 1 nghiem kep la: " + "x1 = x2 = " + (-b / (2 * a));
+                kq += "Phuong trinh co 1 nghiem kep la: " + "x1 = x2 = " + (-B / (2 * A));
             } else {
                 kq += "Phuong trinh co 2 nghiem la: " + "x1= " + getRoot1() + " ,x2= " + getRoot2();
             }
@@ -47,11 +47,11 @@ public class QuadraticEquation {
     }
 
     public double getRoot1() {
-        return (-b + Math.sqrt(delta)) / (2 * a);
+        return (-B + Math.sqrt(delta)) / (2 * A);
     }
 
     public double getRoot2() {
-        return (-b - Math.sqrt(delta)) / (2 * a);
+        return (-B - Math.sqrt(delta)) / (2 * A);
     }
 
     public static void main(String[] args) {

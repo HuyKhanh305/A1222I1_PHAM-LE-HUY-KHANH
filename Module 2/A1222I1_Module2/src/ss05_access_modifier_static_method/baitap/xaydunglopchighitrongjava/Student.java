@@ -1,4 +1,4 @@
-package ss05_access_modifier_static_method.baitap;
+package ss05_access_modifier_static_method.baitap.xaydunglopchighitrongjava;
 
 public class Student {
     private static String name;

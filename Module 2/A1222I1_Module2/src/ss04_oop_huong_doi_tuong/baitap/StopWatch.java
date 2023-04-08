@@ -42,7 +42,7 @@ private long endTime;
         }
 
 //        for (long value : arr) {
-//            System.out.print(arr[value]);
+//            System.out.print(value);
 //        }
         end();
         }
@@ -51,13 +51,7 @@ private long endTime;
         StopWatch watch1 = new StopWatch();
         long[] array = new long[100000];
         System.out.println(watch1.startTime());
-//        long time1 = watch1.getStart();
-//        System.out.println(time1);
-//        long time2 = watch1.getEnd();
-//        System.out.println(time2);
-//        watch1.start();
         watch1.selectionSort(array);
-//        watch1.end();
         long kq = watch1.getElapsedTime();
         System.out.println("Thời gian tính toán là: "+ kq + " mls");
     }
