@@ -1,4 +1,4 @@
-package ss6_ke_thua.thuchanh.hecacdoituonghinhhoc;
+package ss6_ke_thua.thuchanh.he_cac_doi_tuong_hinh_hoc;
 
 public class Circle extends Shape {
     private double radius = 1.0;

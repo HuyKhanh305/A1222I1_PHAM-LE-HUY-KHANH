@@ -1,4 +1,4 @@
-package ss6_ke_thua.thuchanh.hecacdoituonghinhhoc;
+package ss6_ke_thua.thuchanh.he_cac_doi_tuong_hinh_hoc;
 
 public class Test {
     public static void main(String[] args) {
@@ -9,11 +9,15 @@ public class Test {
 
         Circle circle = new Circle(5);
         System.out.println(circle);
-        Circle circle1 = new Circle("green",false,5);
+        double result = circle.getPerimeter();
+        System.out.println("Perimeter of circle is: "+result);
+        Circle circle1 = new Circle("green",false,2);
         System.out.println(circle1);
 
         Rectangle rectangle = new Rectangle(3,5);
         System.out.println(rectangle);
+        double kq = rectangle.getArea();
+        System.out.println("Area of rectangle is: " +kq);
         Rectangle rectangle1 = new Rectangle("yellow",true,5,8);
         System.out.println(rectangle1);
 
