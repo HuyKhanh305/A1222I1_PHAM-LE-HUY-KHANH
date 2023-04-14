@@ -4,7 +4,7 @@ public class Chicken extends Animal implements Edible{
 
     @Override
     public String howToEat() {
-        return "Could be eat raw";
+        return "Not eat meat";
     }
 
     @Override
