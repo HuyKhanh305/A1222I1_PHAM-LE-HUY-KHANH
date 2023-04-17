@@ -1,7 +1,7 @@
 package ss8_clean_code_and_refactoring.baitap.refactoring;
 
 public class TennisGame {
-    
+
         private String score = "";
         private int tempScore = 0;
 
