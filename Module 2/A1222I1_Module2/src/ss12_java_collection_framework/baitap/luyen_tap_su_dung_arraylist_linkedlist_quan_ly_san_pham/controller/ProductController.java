@@ -1,6 +1,5 @@
 package ss12_java_collection_framework.baitap.luyen_tap_su_dung_arraylist_linkedlist_quan_ly_san_pham.controller;
 
-import ss12_java_collection_framework.baitap.luyen_tap_su_dung_arraylist_linkedlist_quan_ly_san_pham.model.Product;
 import ss12_java_collection_framework.baitap.luyen_tap_su_dung_arraylist_linkedlist_quan_ly_san_pham.service.IProductService;
 import ss12_java_collection_framework.baitap.luyen_tap_su_dung_arraylist_linkedlist_quan_ly_san_pham.service.ProductService;
 
@@ -13,7 +12,7 @@ public class ProductController {
         Scanner sc = new Scanner(System.in);
         int select;
         do {
-            System.out.println("---Product Manager---");
+            System.out.println("---Menu---");
             System.out.println("1. Display");
             System.out.println("2. Add ");
             System.out.println("3. Update");
@@ -25,23 +24,32 @@ public class ProductController {
             System.out.print("Please input number ");
             select = Integer.parseInt(sc.nextLine());
 
-            switch (select){
+            switch (select) {
                 case 1:
-                    Product[] productList = service.display();
-                    for (Product product: productList) {
-                        System.out.println(product);
-                    }
-                     break;
+                    service.display();
+                    break;
                 case 2:
+                    service.addProduct();
+                    break;
                 case 3:
+                    service.updateProduct();
+                    break;
                 case 4:
+                    service.deleteProduct();
+                    break;
                 case 5:
+                    service.searchProduct();
+                    break;
                 case 6:
+                    service.sortPriceUp();
+                    break;
                 case 7:
+                    service.sortPriceDown();
+                    break;
                 case 8:
                     System.exit(0);
                     break;
             }
-        } while (true);
+        } while (select != 0);
     }
 }

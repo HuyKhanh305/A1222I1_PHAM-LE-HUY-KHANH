@@ -1,6 +1,6 @@
 package ss12_java_collection_framework.baitap.luyen_tap_su_dung_arraylist_linkedlist_quan_ly_san_pham.model;
 
-public class Product {
+public class Product implements Comparable<Product> {
     private int id;
     private String name;
     private int price;
@@ -45,5 +45,10 @@ public class Product {
                 ", name='" + name + '\'' +
                 ", price=" + price +
                 '}';
+    }
+
+    @Override
+    public int compareTo(Product o) {
+        return o.getPrice() - this.getPrice();
     }
 }
