@@ -5,7 +5,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
-public class Main implements Serializable {
+public class ProductManager implements Serializable {
 
     public static final String FILE_PATH = "C:\\Users\\mike.khanh\\Desktop\\CODEGYM\\A1222I1- PHAM LE HUY KHANH\\Module 2\\A1222I1_Module2\\src\\ss17_io_binary_file_and_serialization\\baitap\\quan_ly_san_pham_luu_ra_file_nhi_phan\\ProductStore.dat";
 
@@ -46,8 +46,8 @@ public class Main implements Serializable {
         double price = Double.parseDouble(scanner.nextLine());
         Product newProduct = new Product(id,name,brand,price);
         productList.add(newProduct);
-        System.out.println("Đã thêm sản phẩm thành công");
         System.out.println(newProduct);
+        System.out.println("Đã thêm sản phẩm thành công");
     }
 
     public static void searchById() throws IOException, ClassNotFoundException {

@@ -1,6 +1,4 @@
-package ss17_io_binary_file_and_serialization.baitap.copy_file_nhi_phan;
-
-import ss16_io_text_file.thuchanh.tinh_tong_cac_so_trong_file_text.ReadFileExample;
+package ss16_io_text_file.thuchanh.tim_gia_tri_lon_nhat_va_ghi_ra_file;
 
 import java.util.List;
 

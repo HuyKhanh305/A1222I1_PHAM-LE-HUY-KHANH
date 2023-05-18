@@ -1,4 +1,4 @@
-package ss16_io_text_file.thuchanh.tinh_tong_cac_so_trong_file_text;
+package ss16_io_text_file.baitap.doc_file_csv;
 
 public class Country {
     private int id;

@@ -11,7 +11,7 @@ public class ProductController {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         int select;
-        do {
+        OUT: do {
             System.out.println("---Menu---");
             System.out.println("1. Display");
             System.out.println("2. Add ");
@@ -47,9 +47,8 @@ public class ProductController {
                     service.sortPriceDown();
                     break;
                 case 8:
-                    System.exit(0);
-                    break;
+                    break OUT;
             }
-        } while (select != 0);
+        } while (true);
     }
 }

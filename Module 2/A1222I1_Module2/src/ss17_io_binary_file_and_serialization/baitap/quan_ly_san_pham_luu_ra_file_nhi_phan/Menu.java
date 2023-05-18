@@ -4,7 +4,7 @@ import java.io.IOException;
 import java.io.Serializable;
 import java.util.Scanner;
 
-public class ProductManager implements Serializable {
+public class Menu implements Serializable {
     public static void main(String[] args) throws IOException, ClassNotFoundException {
         Scanner sc = new Scanner(System.in);
         while (true){
@@ -17,13 +17,13 @@ public class ProductManager implements Serializable {
         int select = sc.nextInt();
             switch (select){
                 case 1:
-                    Main.displayList();
+                    ProductManager.displayList();
                     break;
                 case 2:
-                    Main.addProduct();
+                    ProductManager.addProduct();
                     break;
                 case 3:
-                    Main.searchById();
+                    ProductManager.searchById();
                     break;
                 case 4:
                     System.exit(0);
