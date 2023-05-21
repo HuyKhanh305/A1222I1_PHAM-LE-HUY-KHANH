@@ -1,19 +1,24 @@
-package service;
+package repository;
 
 import model.Customer;
+import utils.Validation;
 
 import java.util.LinkedList;
 import java.util.Scanner;
 
-public class CustomerServiceImpl implements CustomerService {
+public class CustomerRepository implements ICustomerRepository{
+
+    Validation validation = new Validation();
     static Scanner scanner = new Scanner(System.in);
     static LinkedList<Customer> customerList = new LinkedList<>();
 
     static {
-        Customer customer1 = new Customer(111, "Adam", "male", 423423, 45656, "gr54543@", "234 street", "Silver");
-        Customer customer2 = new Customer(222, "Eva", "female", 4767645, 45653456, "gg45345f@", "233 street", "Silver");
-        customerList.add(customer1);
+        Customer customer1 = new Customer("KH-1111","Pham A","male","54353432","094234943","phama@hihi.com","Silver","123 Avenue");
+        Customer customer2 = new Customer("KH-2222","Pham B","male","78353432","09487794943","phamb@hihi.com","Platinum","Alley 124");
+        Customer customer3 = new Customer("KH-3333","Pham C","female","35353432","0994534943","phamc@hihi.com","Silver","123 Street");
+       customerList.add(customer1);
         customerList.add(customer2);
+        customerList.add(customer3);
     }
 
     @Override
@@ -25,23 +30,19 @@ public class CustomerServiceImpl implements CustomerService {
 
     @Override
     public void add() {
-        System.out.println("Insert Customer Id");
-        int id = Integer.parseInt(scanner.nextLine());
-        System.out.println("Insert Customer name");
-        String name = scanner.nextLine();
+
+        String id = validation.getIdRegex();
+        String name = validation.getNameRegex();
         System.out.println("Insert Customer gender");
-        String sex = scanner.nextLine();
-        System.out.println("Insert identity card");
-        int cardNumber = Integer.parseInt(scanner.nextLine());
-        System.out.println("Insert phone number");
-        long phoneNumber = Long.parseLong(scanner.nextLine());
-        System.out.println("Insert email");
-        String mail = scanner.nextLine();
+        String gender = scanner.nextLine();
+        String cardNumber = validation.getIdentityRegex();
+        String phoneNumber = validation.getPhoneRegex();
+        String mail = validation.getEmailRegex();
         System.out.println("Insert Customer address");
         String address = scanner.nextLine();
         System.out.println("Insert Customer type");
         String type = scanner.nextLine();
-        Customer newCustomer = new Customer(id, name, sex, cardNumber, phoneNumber, mail, address, type);
+        Customer newCustomer = new Customer(id,name,gender,cardNumber,phoneNumber,mail,type,address);
         customerList.add(newCustomer);
         System.out.println("Add new customer: completed");
     }
@@ -49,9 +50,11 @@ public class CustomerServiceImpl implements CustomerService {
     @Override
     public void edit() {
         System.out.println("Insert customer id to edit");
-        int id = Integer.parseInt(scanner.nextLine());
+        String id = scanner.nextLine();
+        boolean check = false;
         for (Customer customers : customerList) {
-            if (id == customers.getId()) {
+            if (id.equals(customers.getId())) {
+                check = true;
                 displayEditMenuCustomer();
                 System.out.println("What you want to edit?");
                 int choice = Integer.parseInt(scanner.nextLine());
@@ -67,18 +70,15 @@ public class CustomerServiceImpl implements CustomerService {
                         customers.setGender(sex);
                         break;
                     case 3:
-                        System.out.println("Insert identity card");
-                        int cardNumber = scanner.nextInt();
+                        String cardNumber = validation.getIdentityRegex();
                         customers.setIdentityCard(cardNumber);
                         break;
                     case 4:
-                        System.out.println("Insert phone number");
-                        long phoneNumber = scanner.nextLong();
+                        String phoneNumber = validation.getPhoneRegex();
                         customers.setPhoneNumber(phoneNumber);
                         break;
                     case 5:
-                        System.out.println("Insert email");
-                        String mail = scanner.nextLine();
+                        String mail = validation.getEmailRegex();
                         customers.setEmail(mail);
                         break;
                     case 6:
@@ -94,7 +94,11 @@ public class CustomerServiceImpl implements CustomerService {
                 }
             }
         }
-        System.out.println("UPDATED");
+        if (check) {
+            System.out.println("Update completed");
+        } else {
+            System.out.println("ID not found");
+        }
     }
 
     private static void displayEditMenuCustomer(){

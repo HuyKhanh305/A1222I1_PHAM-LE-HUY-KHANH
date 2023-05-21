@@ -10,11 +10,17 @@ public class Employee extends Person {
     public Employee() {
     }
 
-    public Employee(int id, String name, String gender, int identityCard, long phoneNumber, String email, String position, String academicLevel ,int salary) {
-        super(id, name, gender, identityCard, phoneNumber, email);
-        this.salary = salary;
+    public Employee(String academicLevel, String position, int salary) {
         this.academicLevel = academicLevel;
         this.position = position;
+        this.salary = salary;
+    }
+
+    public Employee(String id, String name, String gender, String identityCard, String phoneNumber, String email, String academicLevel, String position, int salary) {
+        super(id, name, gender, identityCard, phoneNumber, email);
+        this.academicLevel = academicLevel;
+        this.position = position;
+        this.salary = salary;
     }
 
     public String getAcademicLevel() {

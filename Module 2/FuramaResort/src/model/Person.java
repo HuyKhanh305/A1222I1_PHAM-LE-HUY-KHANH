@@ -1,17 +1,17 @@
 package model;
 
 public abstract class Person {
-    private int id;
+    private String id;
     private String name;
     private String gender;
-    private int identityCard;
-    private long phoneNumber;
+    private String identityCard;
+    private String phoneNumber;
     private String email;
 
     public Person() {
     }
 
-    public Person(int id, String name, String gender, int identityCard, long phoneNumber, String email) {
+    public Person(String id, String name, String gender, String identityCard, String phoneNumber, String email) {
         this.id = id;
         this.name = name;
         this.gender = gender;
@@ -20,12 +20,20 @@ public abstract class Person {
         this.email = email;
     }
 
-    public int getId() {
-        return id;
+    public String getIdentityCard() {
+        return identityCard;
     }
 
-    public void setId(int id) {
-        this.id = id;
+    public void setIdentityCard(String identityCard) {
+        this.identityCard = identityCard;
+    }
+
+    public String getPhoneNumber() {
+        return phoneNumber;
+    }
+
+    public void setPhoneNumber(String phoneNumber) {
+        this.phoneNumber = phoneNumber;
     }
 
     public String getName() {
@@ -44,21 +52,6 @@ public abstract class Person {
         this.gender = gender;
     }
 
-    public int getIdentityCard() {
-        return identityCard;
-    }
-
-    public void setIdentityCard(int identityCard) {
-        this.identityCard = identityCard;
-    }
-
-    public long getPhoneNumber() {
-        return phoneNumber;
-    }
-
-    public void setPhoneNumber(long phoneNumber) {
-        this.phoneNumber = phoneNumber;
-    }
 
     public String getEmail() {
         return email;
@@ -66,6 +59,14 @@ public abstract class Person {
 
     public void setEmail(String email) {
         this.email = email;
+    }
+
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
     }
 
     @Override
