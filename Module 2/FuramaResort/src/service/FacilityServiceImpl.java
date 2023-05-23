@@ -1,5 +1,6 @@
 package service;
 
+import model.Villa;
 import repository.FacilityRepository;
 import repository.IFacilityRepository;
 

@@ -1,37 +1,40 @@
 package repository;
 
 import model.Customer;
+import utils.ReadWriteCustomer;
 import utils.Validation;
 
+import java.io.IOException;
 import java.util.LinkedList;
+import java.util.List;
 import java.util.Scanner;
 
-public class CustomerRepository implements ICustomerRepository{
+public class CustomerRepository implements ICustomerRepository {
 
     Validation validation = new Validation();
     static Scanner scanner = new Scanner(System.in);
-    static LinkedList<Customer> customerList = new LinkedList<>();
+    static List<Customer> customerList = new LinkedList<>();
 
     static {
-        Customer customer1 = new Customer("KH-1111","Pham A","male","54353432","094234943","phama@hihi.com","Silver","123 Avenue");
-        Customer customer2 = new Customer("KH-2222","Pham B","male","78353432","09487794943","phamb@hihi.com","Platinum","Alley 124");
-        Customer customer3 = new Customer("KH-3333","Pham C","female","35353432","0994534943","phamc@hihi.com","Silver","123 Street");
-       customerList.add(customer1);
+        Customer customer1 = new Customer("KH-1111", "Pham A", "male", "54353432", "094234943", "phama@hihi.com", "Silver", "123 Avenue");
+        Customer customer2 = new Customer("KH-2222", "Pham B", "male", "78353432", "09487794943", "phamb@hihi.com", "Platinum", "Alley 124");
+        Customer customer3 = new Customer("KH-3333", "Pham C", "female", "35353432", "0994534943", "phamc@hihi.com", "Silver", "123 Street");
+        customerList.add(customer1);
         customerList.add(customer2);
         customerList.add(customer3);
     }
 
     @Override
     public void display() {
-        for (Customer customers : customerList) {
-            System.out.println(customers);
+        for (Customer customer:customerList) {
+            System.out.println(customer);
         }
     }
 
+
     @Override
     public void add() {
-
-        String id = validation.getIdRegex();
+        String id = validation.getCustomerIdRegex();
         String name = validation.getNameRegex();
         System.out.println("Insert Customer gender");
         String gender = scanner.nextLine();
@@ -42,9 +45,18 @@ public class CustomerRepository implements ICustomerRepository{
         String address = scanner.nextLine();
         System.out.println("Insert Customer type");
         String type = scanner.nextLine();
-        Customer newCustomer = new Customer(id,name,gender,cardNumber,phoneNumber,mail,type,address);
+        Customer newCustomer = new Customer(id, name, gender, cardNumber, phoneNumber, mail, type, address);
         customerList.add(newCustomer);
         System.out.println("Add new customer: completed");
+        try {
+            List<Customer> list = ReadWriteCustomer.readFile();
+            for (Customer customers : list) {
+                System.out.println(customers);
+            }
+            ReadWriteCustomer.writeFile(customerList);
+        } catch (IOException e) {
+            System.out.println(e.getMessage());
+        }
     }
 
     @Override
@@ -58,7 +70,7 @@ public class CustomerRepository implements ICustomerRepository{
                 displayEditMenuCustomer();
                 System.out.println("What you want to edit?");
                 int choice = Integer.parseInt(scanner.nextLine());
-                switch (choice){
+                switch (choice) {
                     case 1:
                         System.out.println("Insert Customer name");
                         String name = scanner.nextLine();
@@ -101,7 +113,7 @@ public class CustomerRepository implements ICustomerRepository{
         }
     }
 
-    private static void displayEditMenuCustomer(){
+    private static void displayEditMenuCustomer() {
         System.out.println("1.Name");
         System.out.println("2.Gender");
         System.out.println("3.Identity Card");

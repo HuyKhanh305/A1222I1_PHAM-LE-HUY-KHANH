@@ -24,21 +24,21 @@ public class EmployeeRepository implements IEmployeeRepository {
         employeeList.add(nv3);
     }
 
+
     @Override
     public void display() {
+        writeReadFile();
         for (Employee employees : employeeList) {
             System.out.println(employees);
         }
-        writeReadFile();
     }
 
     private void writeReadFile() {
         try {
             List<Employee> result = ReadWriteEmployee.readEmployeeFile();
-            for (Employee value : result) {
+            for (Employee value: result) {
                 System.out.println(value);
             }
-
             ReadWriteEmployee.writeEmployeeList(employeeList);
         } catch (ClassNotFoundException e) {
             e.printStackTrace();
@@ -50,7 +50,7 @@ public class EmployeeRepository implements IEmployeeRepository {
 
     @Override
     public void add() {
-        String id = validation.getIdRegex();
+        String id = validation.getEmployeeIdRegex();
         String name = validation.getNameRegex();
         System.out.println("Insert employee gender");
         String gender = sc.nextLine();
@@ -63,11 +63,16 @@ public class EmployeeRepository implements IEmployeeRepository {
         System.out.println("Insert employee position");
         System.out.println("{\"Receptionist\", \"Serve\", \"Expert\", \"Supervisor\", \"Manager\", \"Director\"}");
         String position = sc.nextLine();
-        System.out.println("Insert salary");
-        int salary = Integer.parseInt(sc.nextLine());
+        int salary = 0;
+        while (salary <= 0) {
+            System.out.println("Salary must to greater than 0");
+            System.out.println("Insert salary");
+            salary = sc.nextInt();
+        }
 
         Employee newEmployee = new Employee(id,name,gender,cardNumber,phoneNumber,mail,level,position,salary);
         employeeList.add(newEmployee);
+        writeReadFile();
     }
 
     @Override
@@ -116,8 +121,12 @@ public class EmployeeRepository implements IEmployeeRepository {
                         employee.setAcademicLevel(level);
                         break;
                     case 8:
-                        System.out.println("Insert salary");
-                        int salary = sc.nextInt();
+                        int salary = 0;
+                        while (salary <= 0) {
+                            System.out.println("Salary must to greater than 0");
+                            System.out.println("Insert salary");
+                            salary = sc.nextInt();
+                        }
                         employee.setSalary(salary);
                         break;
                 }

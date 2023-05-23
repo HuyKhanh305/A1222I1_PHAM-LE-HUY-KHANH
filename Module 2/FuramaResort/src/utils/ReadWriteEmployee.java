@@ -10,17 +10,16 @@ public class ReadWriteEmployee {
 
     public static final String EMPLOYEE_PATH = "C:\\Users\\mike.khanh\\Desktop\\CODEGYM\\A1222I1- PHAM LE HUY KHANH\\Module 2\\FuramaResort\\src\\data\\Employee.csv";
 
+    static List<Employee> employeeList = new ArrayList<>();
     public static List<Employee> readEmployeeFile() throws IOException, ClassNotFoundException {
-        List<Employee> employeeList = new ArrayList<>();
-
         FileReader fileReader = new FileReader(EMPLOYEE_PATH);
         BufferedReader buff = new BufferedReader(fileReader);
         String line;
-        String temp[];
+        String[] temp;
         Employee employee;
 
         while ((line = buff.readLine()) != null){
-            temp = line.split(",");
+            temp = line.split(", ");
             String id = temp[0];
             String name = temp[1];
             String gender = temp[2];
@@ -38,10 +37,15 @@ public class ReadWriteEmployee {
         return employeeList;
     }
 
-    public static void writeEmployeeList(List<Employee> employees) throws IOException {
-        FileWriter fw = new FileWriter(EMPLOYEE_PATH);
+    public static void writeEmployeeList(List<Employee> list) throws IOException {
+        FileWriter fw = new FileWriter(EMPLOYEE_PATH,true);
         BufferedWriter buff = new BufferedWriter(fw);
-        buff.write(employees.toString() + "\n");
+        for (Employee employee: list) {
+            buff.write(employee.toString());
+            buff.newLine();
+            buff.flush();
+        }
+        fw.close();
         buff.close();
     }
 }

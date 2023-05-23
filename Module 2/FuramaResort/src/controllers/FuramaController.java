@@ -2,6 +2,8 @@ package controllers;
 
 import service.CustomerServiceImpl;
 import service.EmployeeServiceImpl;
+import service.FacilityService;
+import service.FacilityServiceImpl;
 
 import java.util.Scanner;
 
@@ -98,6 +100,7 @@ public class FuramaController {
     }
 
     private static void displayFacilityMenu() {
+        FacilityService facilityService = new FacilityServiceImpl();
         OUT:
         while (true) {
             System.out.println("1\tDisplay list facility");
@@ -108,7 +111,11 @@ public class FuramaController {
 
             switch (scanner.nextInt()) {
                 case 1:
+                    facilityService.display();
+                    break;
                 case 2:
+                    facilityService.add();
+                    break;
                 case 3:
                 case 4:
                     break OUT;
@@ -133,6 +140,8 @@ public class FuramaController {
                 case 2:
                 case 3:
                 case 4:
+                case 5:
+                case 6:
                     break OUT;
                 default:
             }

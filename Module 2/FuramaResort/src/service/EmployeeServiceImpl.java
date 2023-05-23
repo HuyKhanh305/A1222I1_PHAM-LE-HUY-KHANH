@@ -3,6 +3,8 @@ package service;
 import repository.EmployeeRepository;
 import repository.IEmployeeRepository;
 
+import java.io.IOException;
+
 public class EmployeeServiceImpl implements EmployeeService {
 
     private IEmployeeRepository repository = new EmployeeRepository();

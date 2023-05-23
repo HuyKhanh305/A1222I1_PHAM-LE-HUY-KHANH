@@ -2,19 +2,13 @@ package model;
 
 public class Villa extends Facility{
     private String villaType;
-    private int poolArea;
+    private double poolArea;
     private int floor;
 
     public Villa() {
     }
 
-    public Villa(String villaType, int poolArea, int floor) {
-        this.villaType = villaType;
-        this.poolArea = poolArea;
-        this.floor = floor;
-    }
-
-    public Villa(int id, String name, int area, double price, int maxCapacity, String rentType, String villaType, int poolArea, int floor) {
+    public Villa(String id, String name, double area, double price, int maxCapacity, String rentType, String villaType, double poolArea, int floor) {
         super(id, name, area, price, maxCapacity, rentType);
         this.villaType = villaType;
         this.poolArea = poolArea;
@@ -29,11 +23,11 @@ public class Villa extends Facility{
         this.villaType = villaType;
     }
 
-    public int getPoolArea() {
+    public double getPoolArea() {
         return poolArea;
     }
 
-    public void setPoolArea(int poolArea) {
+    public void setPoolArea(double poolArea) {
         this.poolArea = poolArea;
     }
 

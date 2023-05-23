@@ -1,9 +1,9 @@
 package model;
 
 public abstract class Facility {
-    private int id;
+    private String id;
     private String name;
-    private int area;
+    private double area;
     private double price;
     private int maxCapacity;
     private String rentType;
@@ -11,7 +11,7 @@ public abstract class Facility {
     public Facility() {
     }
 
-    public Facility(int id, String name, int area, double price, int maxCapacity, String rentType) {
+    public Facility(String id, String name, double area, double price, int maxCapacity, String rentType) {
         this.id = id;
         this.name = name;
         this.area = area;
@@ -20,11 +20,11 @@ public abstract class Facility {
         this.rentType = rentType;
     }
 
-    public int getId() {
+    public String getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(String id) {
         this.id = id;
     }
 
@@ -36,11 +36,11 @@ public abstract class Facility {
         this.name = name;
     }
 
-    public int getArea() {
+    public double getArea() {
         return area;
     }
 
-    public void setArea(int area) {
+    public void setArea(double area) {
         this.area = area;
     }
 

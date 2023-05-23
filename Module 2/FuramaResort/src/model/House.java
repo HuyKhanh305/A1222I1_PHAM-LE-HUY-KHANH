@@ -6,13 +6,7 @@ public class House extends Facility{
 
     public House() {
     }
-
-    public House(String houseType, int floor) {
-        this.houseType = houseType;
-        this.floor = floor;
-    }
-
-    public House(int id, String name, int area, double price, int maxCapacity, String rentType, String houseType, int floor) {
+    public House(String id, String name, double area, double price, int maxCapacity, String rentType, String houseType, int floor) {
         super(id, name, area, price, maxCapacity, rentType);
         this.houseType = houseType;
         this.floor = floor;
